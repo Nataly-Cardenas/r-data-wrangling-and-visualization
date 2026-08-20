@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="ejercicio-3.html"/>
-<link rel="next" href="intro.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Tarea Visualización</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Ejercicio 1</a></li>
@@ -161,19 +161,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7" data-path="ejercicio-3.html"><a href="ejercicio-3.html#separaci%C3%B3n"><i class="fa fa-check"></i><b>2.7</b> Separación</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="ejercicio-4.html"><a href="ejercicio-4.html"><i class="fa fa-check"></i>Ejercicio 4</a></li>
-<li class="chapter" data-level="3" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>3</b> Introduction</a></li>
-<li class="chapter" data-level="4" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>4</b> Literature</a></li>
-<li class="chapter" data-level="5" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>5</b> Methods</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="methods.html"><a href="methods.html#math-example"><i class="fa fa-check"></i><b>5.1</b> math example</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>6</b> Applications</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>6.1</b> Example one</a></li>
-<li class="chapter" data-level="6.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>6.2</b> Example two</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>7</b> Final Words</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -199,26 +186,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Cree el histograma utilizando <code>ggplot()</code> con <code>geom_hist()</code> y un tamaño de la celda de 500. Los datos están claramente sesgados hacia el extremo inferior del número de acres quemados.</li>
 </ul>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="ejercicio-4.html#cb32-1" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb32-2"><a href="ejercicio-4.html#cb32-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb32-3"><a href="ejercicio-4.html#cb32-3" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;C:/Users/natal/Desktop/bookdown/RDataSets/StudyArea.csv&quot;</span>)</span>
-<span id="cb32-4"><a href="ejercicio-4.html#cb32-4" tabindex="-1"></a>df <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> </span>
-<span id="cb32-5"><a href="ejercicio-4.html#cb32-5" tabindex="-1"></a>  <span class="fu">filter</span>(TOTALACRES <span class="sc">&gt;</span> <span class="dv">1000</span>, YEAR_<span class="sc">%in%</span><span class="dv">2010</span><span class="sc">:</span><span class="dv">2016</span>)</span>
-<span id="cb32-6"><a href="ejercicio-4.html#cb32-6" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
-<span id="cb32-7"><a href="ejercicio-4.html#cb32-7" tabindex="-1"></a>  <span class="fu">select</span>(ORGANIZATI, STATE, YEAR_, TOTALACRES, CAUSE) <span class="sc">%&gt;%</span></span>
-<span id="cb32-8"><a href="ejercicio-4.html#cb32-8" tabindex="-1"></a>  <span class="fu">filter</span>(TOTALACRES <span class="sc">&gt;=</span> <span class="dv">1000</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb32-9"><a href="ejercicio-4.html#cb32-9" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">300</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb32-10"><a href="ejercicio-4.html#cb32-10" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span>TOTALACRES)) <span class="sc">+</span> </span>
-<span id="cb32-11"><a href="ejercicio-4.html#cb32-11" tabindex="-1"></a>  <span class="fu">geom_histogram</span>( <span class="at">binwidth=</span><span class="dv">500</span>, <span class="at">fill =</span> <span class="st">&quot;#3E4B8E&quot;</span>) <span class="sc">+</span></span>
-<span id="cb32-12"><a href="ejercicio-4.html#cb32-12" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Total Acres&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Número de incendios&quot;</span>)<span class="sc">+</span></span>
-<span id="cb32-13"><a href="ejercicio-4.html#cb32-13" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb32-14"><a href="ejercicio-4.html#cb32-14" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb32-15"><a href="ejercicio-4.html#cb32-15" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="at">color =</span> <span class="st">&quot;#3D1534&quot;</span>),</span>
-<span id="cb32-16"><a href="ejercicio-4.html#cb32-16" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">&quot;#A6BCC9&quot;</span>),</span>
-<span id="cb32-17"><a href="ejercicio-4.html#cb32-17" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">&quot;#F6E0B6&quot;</span>),</span>
-<span id="cb32-18"><a href="ejercicio-4.html#cb32-18" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
-<span id="cb32-19"><a href="ejercicio-4.html#cb32-19" tabindex="-1"></a>  )</span></code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/hist_vizest-1.png" width="672" /></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="ejercicio-4.html#cb23-1" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb23-2"><a href="ejercicio-4.html#cb23-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb23-3"><a href="ejercicio-4.html#cb23-3" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;C:/Users/natal/Desktop/bookdown/RDataSets/StudyArea.csv&quot;</span>)</span>
+<span id="cb23-4"><a href="ejercicio-4.html#cb23-4" tabindex="-1"></a>df <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> </span>
+<span id="cb23-5"><a href="ejercicio-4.html#cb23-5" tabindex="-1"></a>  <span class="fu">filter</span>(TOTALACRES <span class="sc">&gt;</span> <span class="dv">1000</span>, YEAR_<span class="sc">%in%</span><span class="dv">2010</span><span class="sc">:</span><span class="dv">2016</span>)</span>
+<span id="cb23-6"><a href="ejercicio-4.html#cb23-6" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
+<span id="cb23-7"><a href="ejercicio-4.html#cb23-7" tabindex="-1"></a>  <span class="fu">select</span>(ORGANIZATI, STATE, YEAR_, TOTALACRES, CAUSE) <span class="sc">%&gt;%</span></span>
+<span id="cb23-8"><a href="ejercicio-4.html#cb23-8" tabindex="-1"></a>  <span class="fu">filter</span>(TOTALACRES <span class="sc">&gt;=</span> <span class="dv">1000</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb23-9"><a href="ejercicio-4.html#cb23-9" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">300</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb23-10"><a href="ejercicio-4.html#cb23-10" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span>TOTALACRES)) <span class="sc">+</span> </span>
+<span id="cb23-11"><a href="ejercicio-4.html#cb23-11" tabindex="-1"></a>  <span class="fu">geom_histogram</span>( <span class="at">binwidth=</span><span class="dv">500</span>, <span class="at">fill =</span> <span class="st">&quot;#3E4B8E&quot;</span>) <span class="sc">+</span></span>
+<span id="cb23-12"><a href="ejercicio-4.html#cb23-12" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Total Acres&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Número de incendios&quot;</span>)<span class="sc">+</span></span>
+<span id="cb23-13"><a href="ejercicio-4.html#cb23-13" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb23-14"><a href="ejercicio-4.html#cb23-14" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb23-15"><a href="ejercicio-4.html#cb23-15" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="at">color =</span> <span class="st">&quot;#3D1534&quot;</span>),</span>
+<span id="cb23-16"><a href="ejercicio-4.html#cb23-16" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">&quot;#A6BCC9&quot;</span>),</span>
+<span id="cb23-17"><a href="ejercicio-4.html#cb23-17" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">&quot;#F6E0B6&quot;</span>),</span>
+<span id="cb23-18"><a href="ejercicio-4.html#cb23-18" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb23-19"><a href="ejercicio-4.html#cb23-19" tabindex="-1"></a>  )</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/hist_vizest-1.png" width="672" />
+La gráfica muestra una fuerte concentración de incendios en áreas pequeñas, mientras que los casos con grandes extensiones de acres son mucho menos frecuentes. Esto indica una distribución altamente sesgada a la derecha, con algunos incendios de gran magnitud que actúan como valores extremos.</p>
 
 </div>
             </section>
@@ -226,8 +214,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="ejercicio-3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ejercicio-3.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -281,20 +269,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

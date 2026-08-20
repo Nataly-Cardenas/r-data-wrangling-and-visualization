@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Tarea Visualización</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Ejercicio 1</a></li>
@@ -161,19 +161,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7" data-path="ejercicio-3.html"><a href="ejercicio-3.html#separaci%C3%B3n"><i class="fa fa-check"></i><b>2.7</b> Separación</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="ejercicio-4.html"><a href="ejercicio-4.html"><i class="fa fa-check"></i>Ejercicio 4</a></li>
-<li class="chapter" data-level="3" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>3</b> Introduction</a></li>
-<li class="chapter" data-level="4" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>4</b> Literature</a></li>
-<li class="chapter" data-level="5" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>5</b> Methods</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="methods.html"><a href="methods.html#math-example"><i class="fa fa-check"></i><b>5.1</b> math example</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>6</b> Applications</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>6.1</b> Example one</a></li>
-<li class="chapter" data-level="6.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>6.2</b> Example two</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>7</b> Final Words</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -196,51 +183,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="historia-olímpica-rio-2016" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">2</span> Historia Olímpica: Rio 2016<a href="historia-olímpica-rio-2016.html#historia-ol%C3%ADmpica-rio-2016" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="historia-olímpica-rio-2016.html#cb16-1" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">&quot;https://raw.githubusercontent.com/cdeoroaguado/Datos/refs/heads/main/dataviz/athlete_events.csv&quot;</span></span>
-<span id="cb16-2"><a href="historia-olímpica-rio-2016.html#cb16-2" tabindex="-1"></a>datos_2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(url)</span>
-<span id="cb16-3"><a href="historia-olímpica-rio-2016.html#cb16-3" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="historia-olímpica-rio-2016.html#cb16-4" tabindex="-1"></a>df_2016 <span class="ot">&lt;-</span> datos_2 <span class="sc">%&gt;%</span></span>
-<span id="cb16-5"><a href="historia-olímpica-rio-2016.html#cb16-5" tabindex="-1"></a>  <span class="fu">filter</span>(Year <span class="sc">==</span> <span class="dv">2016</span>, <span class="sc">!</span><span class="fu">is.na</span>(Medal))</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="historia-olímpica-rio-2016.html#cb7-1" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">&quot;https://raw.githubusercontent.com/cdeoroaguado/Datos/refs/heads/main/dataviz/athlete_events.csv&quot;</span></span>
+<span id="cb7-2"><a href="historia-olímpica-rio-2016.html#cb7-2" tabindex="-1"></a>datos_2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(url)</span>
+<span id="cb7-3"><a href="historia-olímpica-rio-2016.html#cb7-3" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="historia-olímpica-rio-2016.html#cb7-4" tabindex="-1"></a>df_2016 <span class="ot">&lt;-</span> datos_2 <span class="sc">%&gt;%</span></span>
+<span id="cb7-5"><a href="historia-olímpica-rio-2016.html#cb7-5" tabindex="-1"></a>  <span class="fu">filter</span>(Year <span class="sc">==</span> <span class="dv">2016</span>, <span class="sc">!</span><span class="fu">is.na</span>(Medal))</span></code></pre></div>
 <div id="top-5-deportes-con-más-medallas-en-2016" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Top 5 Deportes con Más Medallas en 2016<a href="historia-olímpica-rio-2016.html#top-5-deportes-con-m%C3%A1s-medallas-en-2016" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="historia-olímpica-rio-2016.html#cb17-1" tabindex="-1"></a>top5_deportes <span class="ot">&lt;-</span> df_2016 <span class="sc">%&gt;%</span></span>
-<span id="cb17-2"><a href="historia-olímpica-rio-2016.html#cb17-2" tabindex="-1"></a>  <span class="fu">group_by</span>(Sport) <span class="sc">%&gt;%</span></span>
-<span id="cb17-3"><a href="historia-olímpica-rio-2016.html#cb17-3" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">numero_medallas =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb17-4"><a href="historia-olímpica-rio-2016.html#cb17-4" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(numero_medallas)) <span class="sc">%&gt;%</span></span>
-<span id="cb17-5"><a href="historia-olímpica-rio-2016.html#cb17-5" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">5</span>)</span>
-<span id="cb17-6"><a href="historia-olímpica-rio-2016.html#cb17-6" tabindex="-1"></a></span>
-<span id="cb17-7"><a href="historia-olímpica-rio-2016.html#cb17-7" tabindex="-1"></a>top5_deportes <span class="sc">%&gt;%</span> </span>
-<span id="cb17-8"><a href="historia-olímpica-rio-2016.html#cb17-8" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb17-9"><a href="historia-olímpica-rio-2016.html#cb17-9" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
-<span id="cb17-10"><a href="historia-olímpica-rio-2016.html#cb17-10" tabindex="-1"></a>    <span class="at">title =</span> <span class="fu">md</span>(<span class="st">&quot;**Deportes Principales en Río 2016**&quot;</span>),</span>
-<span id="cb17-11"><a href="historia-olímpica-rio-2016.html#cb17-11" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Top 5 según cantidad total de medallas concedidas&quot;</span></span>
-<span id="cb17-12"><a href="historia-olímpica-rio-2016.html#cb17-12" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb17-13"><a href="historia-olímpica-rio-2016.html#cb17-13" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
-<span id="cb17-14"><a href="historia-olímpica-rio-2016.html#cb17-14" tabindex="-1"></a>    <span class="at">Sport =</span> <span class="st">&quot;Deporte&quot;</span>,</span>
-<span id="cb17-15"><a href="historia-olímpica-rio-2016.html#cb17-15" tabindex="-1"></a>    <span class="at">numero_medallas =</span> <span class="st">&quot;N° de Medallas&quot;</span></span>
-<span id="cb17-16"><a href="historia-olímpica-rio-2016.html#cb17-16" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb17-17"><a href="historia-olímpica-rio-2016.html#cb17-17" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
-<span id="cb17-18"><a href="historia-olímpica-rio-2016.html#cb17-18" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="fu">pct</span>(<span class="dv">60</span>),</span>
-<span id="cb17-19"><a href="historia-olímpica-rio-2016.html#cb17-19" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">&quot;#3D1534&quot;</span>, <span class="co"># Midnight Violet</span></span>
-<span id="cb17-20"><a href="historia-olímpica-rio-2016.html#cb17-20" tabindex="-1"></a>    <span class="at">column_labels.font.weight =</span> <span class="st">&quot;bold&quot;</span></span>
-<span id="cb17-21"><a href="historia-olímpica-rio-2016.html#cb17-21" tabindex="-1"></a>  )</span></code></pre></div>
-<div id="jtacnwjljl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jtacnwjljl table {
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="historia-olímpica-rio-2016.html#cb8-1" tabindex="-1"></a>top5_deportes <span class="ot">&lt;-</span> df_2016 <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="historia-olímpica-rio-2016.html#cb8-2" tabindex="-1"></a>  <span class="fu">group_by</span>(Sport) <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="historia-olímpica-rio-2016.html#cb8-3" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">numero_medallas =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a href="historia-olímpica-rio-2016.html#cb8-4" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(numero_medallas)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-5"><a href="historia-olímpica-rio-2016.html#cb8-5" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">5</span>)</span>
+<span id="cb8-6"><a href="historia-olímpica-rio-2016.html#cb8-6" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="historia-olímpica-rio-2016.html#cb8-7" tabindex="-1"></a>top5_deportes <span class="sc">%&gt;%</span> </span>
+<span id="cb8-8"><a href="historia-olímpica-rio-2016.html#cb8-8" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb8-9"><a href="historia-olímpica-rio-2016.html#cb8-9" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb8-10"><a href="historia-olímpica-rio-2016.html#cb8-10" tabindex="-1"></a>    <span class="at">title =</span> <span class="fu">md</span>(<span class="st">&quot;**Deportes Principales en Río 2016**&quot;</span>),</span>
+<span id="cb8-11"><a href="historia-olímpica-rio-2016.html#cb8-11" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Top 5 según cantidad total de medallas concedidas&quot;</span></span>
+<span id="cb8-12"><a href="historia-olímpica-rio-2016.html#cb8-12" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-13"><a href="historia-olímpica-rio-2016.html#cb8-13" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
+<span id="cb8-14"><a href="historia-olímpica-rio-2016.html#cb8-14" tabindex="-1"></a>    <span class="at">Sport =</span> <span class="st">&quot;Deporte&quot;</span>,</span>
+<span id="cb8-15"><a href="historia-olímpica-rio-2016.html#cb8-15" tabindex="-1"></a>    <span class="at">numero_medallas =</span> <span class="st">&quot;N° de Medallas&quot;</span></span>
+<span id="cb8-16"><a href="historia-olímpica-rio-2016.html#cb8-16" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-17"><a href="historia-olímpica-rio-2016.html#cb8-17" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb8-18"><a href="historia-olímpica-rio-2016.html#cb8-18" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="fu">pct</span>(<span class="dv">60</span>),</span>
+<span id="cb8-19"><a href="historia-olímpica-rio-2016.html#cb8-19" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">&quot;#3D1534&quot;</span>, <span class="co"># Midnight Violet</span></span>
+<span id="cb8-20"><a href="historia-olímpica-rio-2016.html#cb8-20" tabindex="-1"></a>    <span class="at">column_labels.font.weight =</span> <span class="st">&quot;bold&quot;</span></span>
+<span id="cb8-21"><a href="historia-olímpica-rio-2016.html#cb8-21" tabindex="-1"></a>  )</span></code></pre></div>
+<div id="suigslrcgp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#suigslrcgp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jtacnwjljl thead, #jtacnwjljl tbody, #jtacnwjljl tfoot, #jtacnwjljl tr, #jtacnwjljl td, #jtacnwjljl th {
+#suigslrcgp thead, #suigslrcgp tbody, #suigslrcgp tfoot, #suigslrcgp tr, #suigslrcgp td, #suigslrcgp th {
   border-style: none;
 }
 
-#jtacnwjljl p {
+#suigslrcgp p {
   margin: 0;
   padding: 0;
 }
 
-#jtacnwjljl .gt_table {
+#suigslrcgp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -266,12 +253,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-#jtacnwjljl .gt_caption {
+#suigslrcgp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jtacnwjljl .gt_title {
+#suigslrcgp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -283,7 +270,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-#jtacnwjljl .gt_subtitle {
+#suigslrcgp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -295,7 +282,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-#jtacnwjljl .gt_heading {
+#suigslrcgp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -307,13 +294,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#jtacnwjljl .gt_bottom_border {
+#suigslrcgp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jtacnwjljl .gt_col_headings {
+#suigslrcgp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -328,7 +315,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#jtacnwjljl .gt_col_heading {
+#suigslrcgp .gt_col_heading {
   color: #FFFFFF;
   background-color: #3D1534;
   font-size: 100%;
@@ -348,7 +335,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#jtacnwjljl .gt_column_spanner_outer {
+#suigslrcgp .gt_column_spanner_outer {
   color: #FFFFFF;
   background-color: #3D1534;
   font-size: 100%;
@@ -360,15 +347,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-#jtacnwjljl .gt_column_spanner_outer:first-child {
+#suigslrcgp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jtacnwjljl .gt_column_spanner_outer:last-child {
+#suigslrcgp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jtacnwjljl .gt_column_spanner {
+#suigslrcgp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -380,11 +367,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-#jtacnwjljl .gt_spanner_row {
+#suigslrcgp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jtacnwjljl .gt_group_heading {
+#suigslrcgp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -410,7 +397,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   text-align: left;
 }
 
-#jtacnwjljl .gt_empty_group_heading {
+#suigslrcgp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -425,15 +412,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-#jtacnwjljl .gt_from_md > :first-child {
+#suigslrcgp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jtacnwjljl .gt_from_md > :last-child {
+#suigslrcgp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jtacnwjljl .gt_row {
+#suigslrcgp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -452,7 +439,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#jtacnwjljl .gt_stub {
+#suigslrcgp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -465,7 +452,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#jtacnwjljl .gt_stub_row_group {
+#suigslrcgp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -479,15 +466,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: top;
 }
 
-#jtacnwjljl .gt_row_group_first td {
+#suigslrcgp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jtacnwjljl .gt_row_group_first th {
+#suigslrcgp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jtacnwjljl .gt_summary_row {
+#suigslrcgp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -497,16 +484,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#jtacnwjljl .gt_first_summary_row {
+#suigslrcgp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jtacnwjljl .gt_first_summary_row.thick {
+#suigslrcgp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jtacnwjljl .gt_last_summary_row {
+#suigslrcgp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -516,7 +503,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#jtacnwjljl .gt_grand_summary_row {
+#suigslrcgp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -526,7 +513,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#jtacnwjljl .gt_first_grand_summary_row {
+#suigslrcgp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -536,7 +523,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-#jtacnwjljl .gt_last_grand_summary_row_top {
+#suigslrcgp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -546,11 +533,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#jtacnwjljl .gt_striped {
+#suigslrcgp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jtacnwjljl .gt_table_body {
+#suigslrcgp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -559,7 +546,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#jtacnwjljl .gt_footnotes {
+#suigslrcgp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -573,7 +560,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#jtacnwjljl .gt_footnote {
+#suigslrcgp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -582,7 +569,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#jtacnwjljl .gt_sourcenotes {
+#suigslrcgp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -596,7 +583,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#jtacnwjljl .gt_sourcenote {
+#suigslrcgp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -604,72 +591,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#jtacnwjljl .gt_left {
+#suigslrcgp .gt_left {
   text-align: left;
 }
 
-#jtacnwjljl .gt_center {
+#suigslrcgp .gt_center {
   text-align: center;
 }
 
-#jtacnwjljl .gt_right {
+#suigslrcgp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jtacnwjljl .gt_font_normal {
+#suigslrcgp .gt_font_normal {
   font-weight: normal;
 }
 
-#jtacnwjljl .gt_font_bold {
+#suigslrcgp .gt_font_bold {
   font-weight: bold;
 }
 
-#jtacnwjljl .gt_font_italic {
+#suigslrcgp .gt_font_italic {
   font-style: italic;
 }
 
-#jtacnwjljl .gt_super {
+#suigslrcgp .gt_super {
   font-size: 65%;
 }
 
-#jtacnwjljl .gt_footnote_marks {
+#suigslrcgp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jtacnwjljl .gt_asterisk {
+#suigslrcgp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jtacnwjljl .gt_indent_1 {
+#suigslrcgp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jtacnwjljl .gt_indent_2 {
+#suigslrcgp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jtacnwjljl .gt_indent_3 {
+#suigslrcgp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jtacnwjljl .gt_indent_4 {
+#suigslrcgp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jtacnwjljl .gt_indent_5 {
+#suigslrcgp .gt_indent_5 {
   text-indent: 25px;
 }
 
-#jtacnwjljl .katex-display {
+#suigslrcgp .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#jtacnwjljl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#suigslrcgp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -704,53 +691,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="distribución-de-edad-de-los-medallistas" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Distribución de Edad de los Medallistas<a href="historia-olímpica-rio-2016.html#distribuci%C3%B3n-de-edad-de-los-medallistas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="historia-olímpica-rio-2016.html#cb18-1" tabindex="-1"></a>deportes_top <span class="ot">&lt;-</span> top5_deportes<span class="sc">$</span>Sport</span>
-<span id="cb18-2"><a href="historia-olímpica-rio-2016.html#cb18-2" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="historia-olímpica-rio-2016.html#cb18-3" tabindex="-1"></a>tabla_dist <span class="ot">&lt;-</span> df_2016 <span class="sc">%&gt;%</span></span>
-<span id="cb18-4"><a href="historia-olímpica-rio-2016.html#cb18-4" tabindex="-1"></a>  <span class="fu">filter</span>(Sport <span class="sc">%in%</span> deportes_top) <span class="sc">%&gt;%</span></span>
-<span id="cb18-5"><a href="historia-olímpica-rio-2016.html#cb18-5" tabindex="-1"></a>  <span class="fu">group_by</span>(Sport) <span class="sc">%&gt;%</span></span>
-<span id="cb18-6"><a href="historia-olímpica-rio-2016.html#cb18-6" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb18-7"><a href="historia-olímpica-rio-2016.html#cb18-7" tabindex="-1"></a>    <span class="at">media =</span> <span class="fu">mean</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb18-8"><a href="historia-olímpica-rio-2016.html#cb18-8" tabindex="-1"></a>    <span class="at">mediana =</span> <span class="fu">median</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb18-9"><a href="historia-olímpica-rio-2016.html#cb18-9" tabindex="-1"></a>    <span class="at">desviacion =</span> <span class="fu">sd</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb18-10"><a href="historia-olímpica-rio-2016.html#cb18-10" tabindex="-1"></a>    <span class="at">minimo =</span> <span class="fu">min</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb18-11"><a href="historia-olímpica-rio-2016.html#cb18-11" tabindex="-1"></a>    <span class="at">maximo =</span> <span class="fu">max</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb18-12"><a href="historia-olímpica-rio-2016.html#cb18-12" tabindex="-1"></a>    <span class="at">Q1 =</span> <span class="fu">quantile</span>(Age, <span class="fl">0.25</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb18-13"><a href="historia-olímpica-rio-2016.html#cb18-13" tabindex="-1"></a>    <span class="at">Q3 =</span> <span class="fu">quantile</span>(Age, <span class="fl">0.75</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb18-14"><a href="historia-olímpica-rio-2016.html#cb18-14" tabindex="-1"></a>    <span class="at">RIC =</span> <span class="fu">IQR</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb18-15"><a href="historia-olímpica-rio-2016.html#cb18-15" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span></span>
-<span id="cb18-16"><a href="historia-olímpica-rio-2016.html#cb18-16" tabindex="-1"></a>  )</span>
-<span id="cb18-17"><a href="historia-olímpica-rio-2016.html#cb18-17" tabindex="-1"></a></span>
-<span id="cb18-18"><a href="historia-olímpica-rio-2016.html#cb18-18" tabindex="-1"></a>tabla_dist <span class="sc">%&gt;%</span> </span>
-<span id="cb18-19"><a href="historia-olímpica-rio-2016.html#cb18-19" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb18-20"><a href="historia-olímpica-rio-2016.html#cb18-20" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="fu">md</span>(<span class="st">&quot;**Resumen Estadístico de Edad por Deporte**&quot;</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb18-21"><a href="historia-olímpica-rio-2016.html#cb18-21" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
-<span id="cb18-22"><a href="historia-olímpica-rio-2016.html#cb18-22" tabindex="-1"></a>    <span class="at">Sport =</span> <span class="st">&quot;Deporte&quot;</span>, <span class="at">media =</span> <span class="st">&quot;Media&quot;</span>, <span class="at">mediana =</span> <span class="st">&quot;Mediana&quot;</span>,</span>
-<span id="cb18-23"><a href="historia-olímpica-rio-2016.html#cb18-23" tabindex="-1"></a>    <span class="at">desviacion =</span> <span class="st">&quot;DE&quot;</span>, <span class="at">minimo =</span> <span class="st">&quot;Mín&quot;</span>, <span class="at">maximo =</span> <span class="st">&quot;Máx&quot;</span>,</span>
-<span id="cb18-24"><a href="historia-olímpica-rio-2016.html#cb18-24" tabindex="-1"></a>    <span class="at">Q1 =</span> <span class="st">&quot;Q1&quot;</span>, <span class="at">Q3 =</span> <span class="st">&quot;Q3&quot;</span>, <span class="at">RIC =</span> <span class="st">&quot;RIC&quot;</span></span>
-<span id="cb18-25"><a href="historia-olímpica-rio-2016.html#cb18-25" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb18-26"><a href="historia-olímpica-rio-2016.html#cb18-26" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">where</span>(is.numeric), <span class="at">decimals =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb18-27"><a href="historia-olímpica-rio-2016.html#cb18-27" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
-<span id="cb18-28"><a href="historia-olímpica-rio-2016.html#cb18-28" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="fu">pct</span>(<span class="dv">100</span>), </span>
-<span id="cb18-29"><a href="historia-olímpica-rio-2016.html#cb18-29" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">&quot;#3E4B8E&quot;</span></span>
-<span id="cb18-30"><a href="historia-olímpica-rio-2016.html#cb18-30" tabindex="-1"></a>  )</span></code></pre></div>
-<div id="ashxdcwotq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ashxdcwotq table {
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="historia-olímpica-rio-2016.html#cb9-1" tabindex="-1"></a>deportes_top <span class="ot">&lt;-</span> top5_deportes<span class="sc">$</span>Sport</span>
+<span id="cb9-2"><a href="historia-olímpica-rio-2016.html#cb9-2" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="historia-olímpica-rio-2016.html#cb9-3" tabindex="-1"></a>tabla_dist <span class="ot">&lt;-</span> df_2016 <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="historia-olímpica-rio-2016.html#cb9-4" tabindex="-1"></a>  <span class="fu">filter</span>(Sport <span class="sc">%in%</span> deportes_top) <span class="sc">%&gt;%</span></span>
+<span id="cb9-5"><a href="historia-olímpica-rio-2016.html#cb9-5" tabindex="-1"></a>  <span class="fu">group_by</span>(Sport) <span class="sc">%&gt;%</span></span>
+<span id="cb9-6"><a href="historia-olímpica-rio-2016.html#cb9-6" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb9-7"><a href="historia-olímpica-rio-2016.html#cb9-7" tabindex="-1"></a>    <span class="at">media =</span> <span class="fu">mean</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb9-8"><a href="historia-olímpica-rio-2016.html#cb9-8" tabindex="-1"></a>    <span class="at">mediana =</span> <span class="fu">median</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb9-9"><a href="historia-olímpica-rio-2016.html#cb9-9" tabindex="-1"></a>    <span class="at">desviacion =</span> <span class="fu">sd</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb9-10"><a href="historia-olímpica-rio-2016.html#cb9-10" tabindex="-1"></a>    <span class="at">minimo =</span> <span class="fu">min</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb9-11"><a href="historia-olímpica-rio-2016.html#cb9-11" tabindex="-1"></a>    <span class="at">maximo =</span> <span class="fu">max</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb9-12"><a href="historia-olímpica-rio-2016.html#cb9-12" tabindex="-1"></a>    <span class="at">Q1 =</span> <span class="fu">quantile</span>(Age, <span class="fl">0.25</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb9-13"><a href="historia-olímpica-rio-2016.html#cb9-13" tabindex="-1"></a>    <span class="at">Q3 =</span> <span class="fu">quantile</span>(Age, <span class="fl">0.75</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb9-14"><a href="historia-olímpica-rio-2016.html#cb9-14" tabindex="-1"></a>    <span class="at">RIC =</span> <span class="fu">IQR</span>(Age, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb9-15"><a href="historia-olímpica-rio-2016.html#cb9-15" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span></span>
+<span id="cb9-16"><a href="historia-olímpica-rio-2016.html#cb9-16" tabindex="-1"></a>  )</span>
+<span id="cb9-17"><a href="historia-olímpica-rio-2016.html#cb9-17" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="historia-olímpica-rio-2016.html#cb9-18" tabindex="-1"></a>tabla_dist <span class="sc">%&gt;%</span> </span>
+<span id="cb9-19"><a href="historia-olímpica-rio-2016.html#cb9-19" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb9-20"><a href="historia-olímpica-rio-2016.html#cb9-20" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="fu">md</span>(<span class="st">&quot;**Resumen Estadístico de Edad por Deporte**&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-21"><a href="historia-olímpica-rio-2016.html#cb9-21" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
+<span id="cb9-22"><a href="historia-olímpica-rio-2016.html#cb9-22" tabindex="-1"></a>    <span class="at">Sport =</span> <span class="st">&quot;Deporte&quot;</span>, <span class="at">media =</span> <span class="st">&quot;Media&quot;</span>, <span class="at">mediana =</span> <span class="st">&quot;Mediana&quot;</span>,</span>
+<span id="cb9-23"><a href="historia-olímpica-rio-2016.html#cb9-23" tabindex="-1"></a>    <span class="at">desviacion =</span> <span class="st">&quot;DE&quot;</span>, <span class="at">minimo =</span> <span class="st">&quot;Mín&quot;</span>, <span class="at">maximo =</span> <span class="st">&quot;Máx&quot;</span>,</span>
+<span id="cb9-24"><a href="historia-olímpica-rio-2016.html#cb9-24" tabindex="-1"></a>    <span class="at">Q1 =</span> <span class="st">&quot;Q1&quot;</span>, <span class="at">Q3 =</span> <span class="st">&quot;Q3&quot;</span>, <span class="at">RIC =</span> <span class="st">&quot;RIC&quot;</span></span>
+<span id="cb9-25"><a href="historia-olímpica-rio-2016.html#cb9-25" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-26"><a href="historia-olímpica-rio-2016.html#cb9-26" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">where</span>(is.numeric), <span class="at">decimals =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-27"><a href="historia-olímpica-rio-2016.html#cb9-27" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb9-28"><a href="historia-olímpica-rio-2016.html#cb9-28" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="fu">pct</span>(<span class="dv">100</span>), </span>
+<span id="cb9-29"><a href="historia-olímpica-rio-2016.html#cb9-29" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">&quot;#3E4B8E&quot;</span></span>
+<span id="cb9-30"><a href="historia-olímpica-rio-2016.html#cb9-30" tabindex="-1"></a>  )</span></code></pre></div>
+<div id="mqwfgrtpvs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mqwfgrtpvs table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ashxdcwotq thead, #ashxdcwotq tbody, #ashxdcwotq tfoot, #ashxdcwotq tr, #ashxdcwotq td, #ashxdcwotq th {
+#mqwfgrtpvs thead, #mqwfgrtpvs tbody, #mqwfgrtpvs tfoot, #mqwfgrtpvs tr, #mqwfgrtpvs td, #mqwfgrtpvs th {
   border-style: none;
 }
 
-#ashxdcwotq p {
+#mqwfgrtpvs p {
   margin: 0;
   padding: 0;
 }
 
-#ashxdcwotq .gt_table {
+#mqwfgrtpvs .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -776,12 +763,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-#ashxdcwotq .gt_caption {
+#mqwfgrtpvs .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ashxdcwotq .gt_title {
+#mqwfgrtpvs .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -793,7 +780,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-#ashxdcwotq .gt_subtitle {
+#mqwfgrtpvs .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -805,7 +792,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-#ashxdcwotq .gt_heading {
+#mqwfgrtpvs .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -817,13 +804,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#ashxdcwotq .gt_bottom_border {
+#mqwfgrtpvs .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ashxdcwotq .gt_col_headings {
+#mqwfgrtpvs .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -838,7 +825,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#ashxdcwotq .gt_col_heading {
+#mqwfgrtpvs .gt_col_heading {
   color: #FFFFFF;
   background-color: #3E4B8E;
   font-size: 100%;
@@ -858,7 +845,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#ashxdcwotq .gt_column_spanner_outer {
+#mqwfgrtpvs .gt_column_spanner_outer {
   color: #FFFFFF;
   background-color: #3E4B8E;
   font-size: 100%;
@@ -870,15 +857,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-#ashxdcwotq .gt_column_spanner_outer:first-child {
+#mqwfgrtpvs .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ashxdcwotq .gt_column_spanner_outer:last-child {
+#mqwfgrtpvs .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ashxdcwotq .gt_column_spanner {
+#mqwfgrtpvs .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -890,11 +877,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-#ashxdcwotq .gt_spanner_row {
+#mqwfgrtpvs .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ashxdcwotq .gt_group_heading {
+#mqwfgrtpvs .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -920,7 +907,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   text-align: left;
 }
 
-#ashxdcwotq .gt_empty_group_heading {
+#mqwfgrtpvs .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -935,15 +922,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-#ashxdcwotq .gt_from_md > :first-child {
+#mqwfgrtpvs .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ashxdcwotq .gt_from_md > :last-child {
+#mqwfgrtpvs .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ashxdcwotq .gt_row {
+#mqwfgrtpvs .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -962,7 +949,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#ashxdcwotq .gt_stub {
+#mqwfgrtpvs .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -975,7 +962,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#ashxdcwotq .gt_stub_row_group {
+#mqwfgrtpvs .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -989,15 +976,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: top;
 }
 
-#ashxdcwotq .gt_row_group_first td {
+#mqwfgrtpvs .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ashxdcwotq .gt_row_group_first th {
+#mqwfgrtpvs .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ashxdcwotq .gt_summary_row {
+#mqwfgrtpvs .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1007,16 +994,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#ashxdcwotq .gt_first_summary_row {
+#mqwfgrtpvs .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ashxdcwotq .gt_first_summary_row.thick {
+#mqwfgrtpvs .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ashxdcwotq .gt_last_summary_row {
+#mqwfgrtpvs .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1026,7 +1013,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#ashxdcwotq .gt_grand_summary_row {
+#mqwfgrtpvs .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1036,7 +1023,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#ashxdcwotq .gt_first_grand_summary_row {
+#mqwfgrtpvs .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1046,7 +1033,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-#ashxdcwotq .gt_last_grand_summary_row_top {
+#mqwfgrtpvs .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1056,11 +1043,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#ashxdcwotq .gt_striped {
+#mqwfgrtpvs .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ashxdcwotq .gt_table_body {
+#mqwfgrtpvs .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1069,7 +1056,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#ashxdcwotq .gt_footnotes {
+#mqwfgrtpvs .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1083,7 +1070,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#ashxdcwotq .gt_footnote {
+#mqwfgrtpvs .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1092,7 +1079,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#ashxdcwotq .gt_sourcenotes {
+#mqwfgrtpvs .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1106,7 +1093,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#ashxdcwotq .gt_sourcenote {
+#mqwfgrtpvs .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1114,72 +1101,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#ashxdcwotq .gt_left {
+#mqwfgrtpvs .gt_left {
   text-align: left;
 }
 
-#ashxdcwotq .gt_center {
+#mqwfgrtpvs .gt_center {
   text-align: center;
 }
 
-#ashxdcwotq .gt_right {
+#mqwfgrtpvs .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ashxdcwotq .gt_font_normal {
+#mqwfgrtpvs .gt_font_normal {
   font-weight: normal;
 }
 
-#ashxdcwotq .gt_font_bold {
+#mqwfgrtpvs .gt_font_bold {
   font-weight: bold;
 }
 
-#ashxdcwotq .gt_font_italic {
+#mqwfgrtpvs .gt_font_italic {
   font-style: italic;
 }
 
-#ashxdcwotq .gt_super {
+#mqwfgrtpvs .gt_super {
   font-size: 65%;
 }
 
-#ashxdcwotq .gt_footnote_marks {
+#mqwfgrtpvs .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ashxdcwotq .gt_asterisk {
+#mqwfgrtpvs .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ashxdcwotq .gt_indent_1 {
+#mqwfgrtpvs .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ashxdcwotq .gt_indent_2 {
+#mqwfgrtpvs .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ashxdcwotq .gt_indent_3 {
+#mqwfgrtpvs .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ashxdcwotq .gt_indent_4 {
+#mqwfgrtpvs .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ashxdcwotq .gt_indent_5 {
+#mqwfgrtpvs .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ashxdcwotq .katex-display {
+#mqwfgrtpvs .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ashxdcwotq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#mqwfgrtpvs div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1251,62 +1238,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
 </table>
 </div>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="historia-olímpica-rio-2016.html#cb19-1" tabindex="-1"></a><span class="fu">ggplot</span>(df_2016 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Sport <span class="sc">%in%</span> deportes_top), <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(Sport, Age, <span class="at">FUN =</span> median), <span class="at">y =</span> Age, <span class="at">fill =</span> Sport)) <span class="sc">+</span></span>
-<span id="cb19-2"><a href="historia-olímpica-rio-2016.html#cb19-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.85</span>, <span class="at">color =</span> <span class="st">&quot;#3D1534&quot;</span>, <span class="at">outlier.color =</span> <span class="st">&quot;#3E4B8E&quot;</span>, <span class="at">outlier.size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb19-3"><a href="historia-olímpica-rio-2016.html#cb19-3" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">unname</span>(paleta_custom)) <span class="sc">+</span></span>
-<span id="cb19-4"><a href="historia-olímpica-rio-2016.html#cb19-4" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb19-5"><a href="historia-olímpica-rio-2016.html#cb19-5" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Distribución de edad en medallistas de Río 2016&quot;</span>,</span>
-<span id="cb19-6"><a href="historia-olímpica-rio-2016.html#cb19-6" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Comparación entre los 5 deportes principales&quot;</span>,</span>
-<span id="cb19-7"><a href="historia-olímpica-rio-2016.html#cb19-7" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Deporte&quot;</span>,</span>
-<span id="cb19-8"><a href="historia-olímpica-rio-2016.html#cb19-8" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Edad (años)&quot;</span></span>
-<span id="cb19-9"><a href="historia-olímpica-rio-2016.html#cb19-9" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb19-10"><a href="historia-olímpica-rio-2016.html#cb19-10" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb19-11"><a href="historia-olímpica-rio-2016.html#cb19-11" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb19-12"><a href="historia-olímpica-rio-2016.html#cb19-12" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="at">size =</span> <span class="dv">14</span>, <span class="at">color =</span> <span class="st">&quot;#3D1534&quot;</span>),</span>
-<span id="cb19-13"><a href="historia-olímpica-rio-2016.html#cb19-13" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>,</span>
-<span id="cb19-14"><a href="historia-olímpica-rio-2016.html#cb19-14" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
-<span id="cb19-15"><a href="historia-olímpica-rio-2016.html#cb19-15" tabindex="-1"></a>  )</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="historia-olímpica-rio-2016.html#cb10-1" tabindex="-1"></a><span class="fu">ggplot</span>(df_2016 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Sport <span class="sc">%in%</span> deportes_top), <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(Sport, Age, <span class="at">FUN =</span> median), <span class="at">y =</span> Age, <span class="at">fill =</span> Sport)) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="historia-olímpica-rio-2016.html#cb10-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.85</span>, <span class="at">color =</span> <span class="st">&quot;#3D1534&quot;</span>, <span class="at">outlier.color =</span> <span class="st">&quot;#3E4B8E&quot;</span>, <span class="at">outlier.size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="historia-olímpica-rio-2016.html#cb10-3" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">unname</span>(paleta_custom)) <span class="sc">+</span></span>
+<span id="cb10-4"><a href="historia-olímpica-rio-2016.html#cb10-4" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb10-5"><a href="historia-olímpica-rio-2016.html#cb10-5" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Distribución de edad en medallistas de Río 2016&quot;</span>,</span>
+<span id="cb10-6"><a href="historia-olímpica-rio-2016.html#cb10-6" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Comparación entre los 5 deportes principales&quot;</span>,</span>
+<span id="cb10-7"><a href="historia-olímpica-rio-2016.html#cb10-7" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Deporte&quot;</span>,</span>
+<span id="cb10-8"><a href="historia-olímpica-rio-2016.html#cb10-8" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Edad (años)&quot;</span></span>
+<span id="cb10-9"><a href="historia-olímpica-rio-2016.html#cb10-9" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-10"><a href="historia-olímpica-rio-2016.html#cb10-10" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb10-11"><a href="historia-olímpica-rio-2016.html#cb10-11" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb10-12"><a href="historia-olímpica-rio-2016.html#cb10-12" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="at">size =</span> <span class="dv">14</span>, <span class="at">color =</span> <span class="st">&quot;#3D1534&quot;</span>),</span>
+<span id="cb10-13"><a href="historia-olímpica-rio-2016.html#cb10-13" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">&quot;none&quot;</span>,</span>
+<span id="cb10-14"><a href="historia-olímpica-rio-2016.html#cb10-14" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb10-15"><a href="historia-olímpica-rio-2016.html#cb10-15" tabindex="-1"></a>  )</span></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/grafica-boxplots-edad-1.png" width="672" /></p>
 </div>
 <div id="equipos-líderes-por-deporte" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Equipos Líderes por Deporte<a href="historia-olímpica-rio-2016.html#equipos-l%C3%ADderes-por-deporte" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="historia-olímpica-rio-2016.html#cb20-1" tabindex="-1"></a>tabla_equipos <span class="ot">&lt;-</span> df_2016 <span class="sc">%&gt;%</span></span>
-<span id="cb20-2"><a href="historia-olímpica-rio-2016.html#cb20-2" tabindex="-1"></a>  <span class="fu">filter</span>(Sport <span class="sc">%in%</span> deportes_top) <span class="sc">%&gt;%</span></span>
-<span id="cb20-3"><a href="historia-olímpica-rio-2016.html#cb20-3" tabindex="-1"></a>  <span class="fu">group_by</span>(Sport, Team) <span class="sc">%&gt;%</span></span>
-<span id="cb20-4"><a href="historia-olímpica-rio-2016.html#cb20-4" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">numero_medallas =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb20-5"><a href="historia-olímpica-rio-2016.html#cb20-5" tabindex="-1"></a>  <span class="fu">group_by</span>(Sport) <span class="sc">%&gt;%</span></span>
-<span id="cb20-6"><a href="historia-olímpica-rio-2016.html#cb20-6" tabindex="-1"></a>  <span class="fu">slice_max</span>(numero_medallas, <span class="at">n =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb20-7"><a href="historia-olímpica-rio-2016.html#cb20-7" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
-<span id="cb20-8"><a href="historia-olímpica-rio-2016.html#cb20-8" tabindex="-1"></a></span>
-<span id="cb20-9"><a href="historia-olímpica-rio-2016.html#cb20-9" tabindex="-1"></a>tabla_equipos <span class="sc">%&gt;%</span> </span>
-<span id="cb20-10"><a href="historia-olímpica-rio-2016.html#cb20-10" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb20-11"><a href="historia-olímpica-rio-2016.html#cb20-11" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="fu">md</span>(<span class="st">&quot;**Equipos Nacionales con Más Medallas**&quot;</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-12"><a href="historia-olímpica-rio-2016.html#cb20-12" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
-<span id="cb20-13"><a href="historia-olímpica-rio-2016.html#cb20-13" tabindex="-1"></a>    <span class="at">Sport =</span> <span class="st">&quot;Deporte&quot;</span>,</span>
-<span id="cb20-14"><a href="historia-olímpica-rio-2016.html#cb20-14" tabindex="-1"></a>    <span class="at">Team =</span> <span class="st">&quot;Equipo / País&quot;</span>,</span>
-<span id="cb20-15"><a href="historia-olímpica-rio-2016.html#cb20-15" tabindex="-1"></a>    <span class="at">numero_medallas =</span> <span class="st">&quot;Total Medallas&quot;</span></span>
-<span id="cb20-16"><a href="historia-olímpica-rio-2016.html#cb20-16" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb20-17"><a href="historia-olímpica-rio-2016.html#cb20-17" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
-<span id="cb20-18"><a href="historia-olímpica-rio-2016.html#cb20-18" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="fu">pct</span>(<span class="dv">70</span>), </span>
-<span id="cb20-19"><a href="historia-olímpica-rio-2016.html#cb20-19" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">&quot;#3D1534&quot;</span></span>
-<span id="cb20-20"><a href="historia-olímpica-rio-2016.html#cb20-20" tabindex="-1"></a>  )</span></code></pre></div>
-<div id="jacembkxgt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jacembkxgt table {
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="historia-olímpica-rio-2016.html#cb11-1" tabindex="-1"></a>tabla_equipos <span class="ot">&lt;-</span> df_2016 <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="historia-olímpica-rio-2016.html#cb11-2" tabindex="-1"></a>  <span class="fu">filter</span>(Sport <span class="sc">%in%</span> deportes_top) <span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a href="historia-olímpica-rio-2016.html#cb11-3" tabindex="-1"></a>  <span class="fu">group_by</span>(Sport, Team) <span class="sc">%&gt;%</span></span>
+<span id="cb11-4"><a href="historia-olímpica-rio-2016.html#cb11-4" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">numero_medallas =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-5"><a href="historia-olímpica-rio-2016.html#cb11-5" tabindex="-1"></a>  <span class="fu">group_by</span>(Sport) <span class="sc">%&gt;%</span></span>
+<span id="cb11-6"><a href="historia-olímpica-rio-2016.html#cb11-6" tabindex="-1"></a>  <span class="fu">slice_max</span>(numero_medallas, <span class="at">n =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb11-7"><a href="historia-olímpica-rio-2016.html#cb11-7" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb11-8"><a href="historia-olímpica-rio-2016.html#cb11-8" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="historia-olímpica-rio-2016.html#cb11-9" tabindex="-1"></a>tabla_equipos <span class="sc">%&gt;%</span> </span>
+<span id="cb11-10"><a href="historia-olímpica-rio-2016.html#cb11-10" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb11-11"><a href="historia-olímpica-rio-2016.html#cb11-11" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="fu">md</span>(<span class="st">&quot;**Equipos Nacionales con Más Medallas**&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-12"><a href="historia-olímpica-rio-2016.html#cb11-12" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
+<span id="cb11-13"><a href="historia-olímpica-rio-2016.html#cb11-13" tabindex="-1"></a>    <span class="at">Sport =</span> <span class="st">&quot;Deporte&quot;</span>,</span>
+<span id="cb11-14"><a href="historia-olímpica-rio-2016.html#cb11-14" tabindex="-1"></a>    <span class="at">Team =</span> <span class="st">&quot;Equipo / País&quot;</span>,</span>
+<span id="cb11-15"><a href="historia-olímpica-rio-2016.html#cb11-15" tabindex="-1"></a>    <span class="at">numero_medallas =</span> <span class="st">&quot;Total Medallas&quot;</span></span>
+<span id="cb11-16"><a href="historia-olímpica-rio-2016.html#cb11-16" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb11-17"><a href="historia-olímpica-rio-2016.html#cb11-17" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb11-18"><a href="historia-olímpica-rio-2016.html#cb11-18" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="fu">pct</span>(<span class="dv">70</span>), </span>
+<span id="cb11-19"><a href="historia-olímpica-rio-2016.html#cb11-19" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">&quot;#3D1534&quot;</span></span>
+<span id="cb11-20"><a href="historia-olímpica-rio-2016.html#cb11-20" tabindex="-1"></a>  )</span></code></pre></div>
+<div id="dfzltuuktk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dfzltuuktk table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jacembkxgt thead, #jacembkxgt tbody, #jacembkxgt tfoot, #jacembkxgt tr, #jacembkxgt td, #jacembkxgt th {
+#dfzltuuktk thead, #dfzltuuktk tbody, #dfzltuuktk tfoot, #dfzltuuktk tr, #dfzltuuktk td, #dfzltuuktk th {
   border-style: none;
 }
 
-#jacembkxgt p {
+#dfzltuuktk p {
   margin: 0;
   padding: 0;
 }
 
-#jacembkxgt .gt_table {
+#dfzltuuktk .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1332,12 +1319,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-#jacembkxgt .gt_caption {
+#dfzltuuktk .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jacembkxgt .gt_title {
+#dfzltuuktk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1349,7 +1336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-#jacembkxgt .gt_subtitle {
+#dfzltuuktk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1361,7 +1348,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-#jacembkxgt .gt_heading {
+#dfzltuuktk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1373,13 +1360,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#jacembkxgt .gt_bottom_border {
+#dfzltuuktk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jacembkxgt .gt_col_headings {
+#dfzltuuktk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1394,7 +1381,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#jacembkxgt .gt_col_heading {
+#dfzltuuktk .gt_col_heading {
   color: #FFFFFF;
   background-color: #3D1534;
   font-size: 100%;
@@ -1414,7 +1401,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#jacembkxgt .gt_column_spanner_outer {
+#dfzltuuktk .gt_column_spanner_outer {
   color: #FFFFFF;
   background-color: #3D1534;
   font-size: 100%;
@@ -1426,15 +1413,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-#jacembkxgt .gt_column_spanner_outer:first-child {
+#dfzltuuktk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jacembkxgt .gt_column_spanner_outer:last-child {
+#dfzltuuktk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jacembkxgt .gt_column_spanner {
+#dfzltuuktk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1446,11 +1433,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-#jacembkxgt .gt_spanner_row {
+#dfzltuuktk .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jacembkxgt .gt_group_heading {
+#dfzltuuktk .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1476,7 +1463,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   text-align: left;
 }
 
-#jacembkxgt .gt_empty_group_heading {
+#dfzltuuktk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1491,15 +1478,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-#jacembkxgt .gt_from_md > :first-child {
+#dfzltuuktk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jacembkxgt .gt_from_md > :last-child {
+#dfzltuuktk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jacembkxgt .gt_row {
+#dfzltuuktk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1518,7 +1505,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#jacembkxgt .gt_stub {
+#dfzltuuktk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1531,7 +1518,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#jacembkxgt .gt_stub_row_group {
+#dfzltuuktk .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1545,15 +1532,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: top;
 }
 
-#jacembkxgt .gt_row_group_first td {
+#dfzltuuktk .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jacembkxgt .gt_row_group_first th {
+#dfzltuuktk .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jacembkxgt .gt_summary_row {
+#dfzltuuktk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1563,16 +1550,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#jacembkxgt .gt_first_summary_row {
+#dfzltuuktk .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jacembkxgt .gt_first_summary_row.thick {
+#dfzltuuktk .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jacembkxgt .gt_last_summary_row {
+#dfzltuuktk .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1582,7 +1569,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#jacembkxgt .gt_grand_summary_row {
+#dfzltuuktk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1592,7 +1579,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#jacembkxgt .gt_first_grand_summary_row {
+#dfzltuuktk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1602,7 +1589,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-#jacembkxgt .gt_last_grand_summary_row_top {
+#dfzltuuktk .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1612,11 +1599,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#jacembkxgt .gt_striped {
+#dfzltuuktk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jacembkxgt .gt_table_body {
+#dfzltuuktk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1625,7 +1612,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#jacembkxgt .gt_footnotes {
+#dfzltuuktk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1639,7 +1626,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#jacembkxgt .gt_footnote {
+#dfzltuuktk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1648,7 +1635,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#jacembkxgt .gt_sourcenotes {
+#dfzltuuktk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1662,7 +1649,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#jacembkxgt .gt_sourcenote {
+#dfzltuuktk .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1670,72 +1657,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#jacembkxgt .gt_left {
+#dfzltuuktk .gt_left {
   text-align: left;
 }
 
-#jacembkxgt .gt_center {
+#dfzltuuktk .gt_center {
   text-align: center;
 }
 
-#jacembkxgt .gt_right {
+#dfzltuuktk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jacembkxgt .gt_font_normal {
+#dfzltuuktk .gt_font_normal {
   font-weight: normal;
 }
 
-#jacembkxgt .gt_font_bold {
+#dfzltuuktk .gt_font_bold {
   font-weight: bold;
 }
 
-#jacembkxgt .gt_font_italic {
+#dfzltuuktk .gt_font_italic {
   font-style: italic;
 }
 
-#jacembkxgt .gt_super {
+#dfzltuuktk .gt_super {
   font-size: 65%;
 }
 
-#jacembkxgt .gt_footnote_marks {
+#dfzltuuktk .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jacembkxgt .gt_asterisk {
+#dfzltuuktk .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jacembkxgt .gt_indent_1 {
+#dfzltuuktk .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jacembkxgt .gt_indent_2 {
+#dfzltuuktk .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jacembkxgt .gt_indent_3 {
+#dfzltuuktk .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jacembkxgt .gt_indent_4 {
+#dfzltuuktk .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jacembkxgt .gt_indent_5 {
+#dfzltuuktk .gt_indent_5 {
   text-indent: 25px;
 }
 
-#jacembkxgt .katex-display {
+#dfzltuuktk .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#jacembkxgt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dfzltuuktk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1774,45 +1761,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="análisis-del-peso-por-sexo" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Análisis del Peso por Sexo<a href="historia-olímpica-rio-2016.html#an%C3%A1lisis-del-peso-por-sexo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="historia-olímpica-rio-2016.html#cb21-1" tabindex="-1"></a>tabla_peso <span class="ot">&lt;-</span> df_2016 <span class="sc">%&gt;%</span></span>
-<span id="cb21-2"><a href="historia-olímpica-rio-2016.html#cb21-2" tabindex="-1"></a>  <span class="fu">filter</span>(Sport <span class="sc">%in%</span> deportes_top) <span class="sc">%&gt;%</span></span>
-<span id="cb21-3"><a href="historia-olímpica-rio-2016.html#cb21-3" tabindex="-1"></a>  <span class="fu">group_by</span>(Sport, Sex) <span class="sc">%&gt;%</span></span>
-<span id="cb21-4"><a href="historia-olímpica-rio-2016.html#cb21-4" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb21-5"><a href="historia-olímpica-rio-2016.html#cb21-5" tabindex="-1"></a>    <span class="at">media =</span> <span class="fu">mean</span>(Weight, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb21-6"><a href="historia-olímpica-rio-2016.html#cb21-6" tabindex="-1"></a>    <span class="at">mediana =</span> <span class="fu">median</span>(Weight, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb21-7"><a href="historia-olímpica-rio-2016.html#cb21-7" tabindex="-1"></a>    <span class="at">RIC =</span> <span class="fu">IQR</span>(Weight, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb21-8"><a href="historia-olímpica-rio-2016.html#cb21-8" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span></span>
-<span id="cb21-9"><a href="historia-olímpica-rio-2016.html#cb21-9" tabindex="-1"></a>  )</span>
-<span id="cb21-10"><a href="historia-olímpica-rio-2016.html#cb21-10" tabindex="-1"></a></span>
-<span id="cb21-11"><a href="historia-olímpica-rio-2016.html#cb21-11" tabindex="-1"></a>tabla_peso <span class="sc">%&gt;%</span> </span>
-<span id="cb21-12"><a href="historia-olímpica-rio-2016.html#cb21-12" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb21-13"><a href="historia-olímpica-rio-2016.html#cb21-13" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="fu">md</span>(<span class="st">&quot;**Tendencia de Peso por Deporte y Sexo**&quot;</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb21-14"><a href="historia-olímpica-rio-2016.html#cb21-14" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
-<span id="cb21-15"><a href="historia-olímpica-rio-2016.html#cb21-15" tabindex="-1"></a>    <span class="at">Sport =</span> <span class="st">&quot;Deporte&quot;</span>, <span class="at">Sex =</span> <span class="st">&quot;Sexo&quot;</span>, <span class="at">media =</span> <span class="st">&quot;Media (kg)&quot;</span>,</span>
-<span id="cb21-16"><a href="historia-olímpica-rio-2016.html#cb21-16" tabindex="-1"></a>    <span class="at">mediana =</span> <span class="st">&quot;Mediana (kg)&quot;</span>, <span class="at">RIC =</span> <span class="st">&quot;RIC&quot;</span></span>
-<span id="cb21-17"><a href="historia-olímpica-rio-2016.html#cb21-17" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb21-18"><a href="historia-olímpica-rio-2016.html#cb21-18" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">c</span>(media, mediana, RIC), <span class="at">decimals =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb21-19"><a href="historia-olímpica-rio-2016.html#cb21-19" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
-<span id="cb21-20"><a href="historia-olímpica-rio-2016.html#cb21-20" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="fu">pct</span>(<span class="dv">80</span>), </span>
-<span id="cb21-21"><a href="historia-olímpica-rio-2016.html#cb21-21" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">&quot;#3E4B8E&quot;</span></span>
-<span id="cb21-22"><a href="historia-olímpica-rio-2016.html#cb21-22" tabindex="-1"></a>  )</span></code></pre></div>
-<div id="qfzuvtemej" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qfzuvtemej table {
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="historia-olímpica-rio-2016.html#cb12-1" tabindex="-1"></a>tabla_peso <span class="ot">&lt;-</span> df_2016 <span class="sc">%&gt;%</span></span>
+<span id="cb12-2"><a href="historia-olímpica-rio-2016.html#cb12-2" tabindex="-1"></a>  <span class="fu">filter</span>(Sport <span class="sc">%in%</span> deportes_top) <span class="sc">%&gt;%</span></span>
+<span id="cb12-3"><a href="historia-olímpica-rio-2016.html#cb12-3" tabindex="-1"></a>  <span class="fu">group_by</span>(Sport, Sex) <span class="sc">%&gt;%</span></span>
+<span id="cb12-4"><a href="historia-olímpica-rio-2016.html#cb12-4" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb12-5"><a href="historia-olímpica-rio-2016.html#cb12-5" tabindex="-1"></a>    <span class="at">media =</span> <span class="fu">mean</span>(Weight, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb12-6"><a href="historia-olímpica-rio-2016.html#cb12-6" tabindex="-1"></a>    <span class="at">mediana =</span> <span class="fu">median</span>(Weight, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb12-7"><a href="historia-olímpica-rio-2016.html#cb12-7" tabindex="-1"></a>    <span class="at">RIC =</span> <span class="fu">IQR</span>(Weight, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb12-8"><a href="historia-olímpica-rio-2016.html#cb12-8" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span></span>
+<span id="cb12-9"><a href="historia-olímpica-rio-2016.html#cb12-9" tabindex="-1"></a>  )</span>
+<span id="cb12-10"><a href="historia-olímpica-rio-2016.html#cb12-10" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="historia-olímpica-rio-2016.html#cb12-11" tabindex="-1"></a>tabla_peso <span class="sc">%&gt;%</span> </span>
+<span id="cb12-12"><a href="historia-olímpica-rio-2016.html#cb12-12" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb12-13"><a href="historia-olímpica-rio-2016.html#cb12-13" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="fu">md</span>(<span class="st">&quot;**Tendencia de Peso por Deporte y Sexo**&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-14"><a href="historia-olímpica-rio-2016.html#cb12-14" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
+<span id="cb12-15"><a href="historia-olímpica-rio-2016.html#cb12-15" tabindex="-1"></a>    <span class="at">Sport =</span> <span class="st">&quot;Deporte&quot;</span>, <span class="at">Sex =</span> <span class="st">&quot;Sexo&quot;</span>, <span class="at">media =</span> <span class="st">&quot;Media (kg)&quot;</span>,</span>
+<span id="cb12-16"><a href="historia-olímpica-rio-2016.html#cb12-16" tabindex="-1"></a>    <span class="at">mediana =</span> <span class="st">&quot;Mediana (kg)&quot;</span>, <span class="at">RIC =</span> <span class="st">&quot;RIC&quot;</span></span>
+<span id="cb12-17"><a href="historia-olímpica-rio-2016.html#cb12-17" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-18"><a href="historia-olímpica-rio-2016.html#cb12-18" tabindex="-1"></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> <span class="fu">c</span>(media, mediana, RIC), <span class="at">decimals =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-19"><a href="historia-olímpica-rio-2016.html#cb12-19" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb12-20"><a href="historia-olímpica-rio-2016.html#cb12-20" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="fu">pct</span>(<span class="dv">80</span>), </span>
+<span id="cb12-21"><a href="historia-olímpica-rio-2016.html#cb12-21" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">&quot;#3E4B8E&quot;</span></span>
+<span id="cb12-22"><a href="historia-olímpica-rio-2016.html#cb12-22" tabindex="-1"></a>  )</span></code></pre></div>
+<div id="ceshmegouy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ceshmegouy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qfzuvtemej thead, #qfzuvtemej tbody, #qfzuvtemej tfoot, #qfzuvtemej tr, #qfzuvtemej td, #qfzuvtemej th {
+#ceshmegouy thead, #ceshmegouy tbody, #ceshmegouy tfoot, #ceshmegouy tr, #ceshmegouy td, #ceshmegouy th {
   border-style: none;
 }
 
-#qfzuvtemej p {
+#ceshmegouy p {
   margin: 0;
   padding: 0;
 }
 
-#qfzuvtemej .gt_table {
+#ceshmegouy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1838,12 +1825,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-#qfzuvtemej .gt_caption {
+#ceshmegouy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qfzuvtemej .gt_title {
+#ceshmegouy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1855,7 +1842,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-#qfzuvtemej .gt_subtitle {
+#ceshmegouy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1867,7 +1854,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-#qfzuvtemej .gt_heading {
+#ceshmegouy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1879,13 +1866,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#qfzuvtemej .gt_bottom_border {
+#ceshmegouy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qfzuvtemej .gt_col_headings {
+#ceshmegouy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1900,7 +1887,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#qfzuvtemej .gt_col_heading {
+#ceshmegouy .gt_col_heading {
   color: #FFFFFF;
   background-color: #3E4B8E;
   font-size: 100%;
@@ -1920,7 +1907,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#qfzuvtemej .gt_column_spanner_outer {
+#ceshmegouy .gt_column_spanner_outer {
   color: #FFFFFF;
   background-color: #3E4B8E;
   font-size: 100%;
@@ -1932,15 +1919,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-#qfzuvtemej .gt_column_spanner_outer:first-child {
+#ceshmegouy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qfzuvtemej .gt_column_spanner_outer:last-child {
+#ceshmegouy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qfzuvtemej .gt_column_spanner {
+#ceshmegouy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1952,11 +1939,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-#qfzuvtemej .gt_spanner_row {
+#ceshmegouy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qfzuvtemej .gt_group_heading {
+#ceshmegouy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1982,7 +1969,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   text-align: left;
 }
 
-#qfzuvtemej .gt_empty_group_heading {
+#ceshmegouy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1997,15 +1984,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-#qfzuvtemej .gt_from_md > :first-child {
+#ceshmegouy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qfzuvtemej .gt_from_md > :last-child {
+#ceshmegouy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qfzuvtemej .gt_row {
+#ceshmegouy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2024,7 +2011,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#qfzuvtemej .gt_stub {
+#ceshmegouy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2037,7 +2024,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#qfzuvtemej .gt_stub_row_group {
+#ceshmegouy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2051,15 +2038,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: top;
 }
 
-#qfzuvtemej .gt_row_group_first td {
+#ceshmegouy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qfzuvtemej .gt_row_group_first th {
+#ceshmegouy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qfzuvtemej .gt_summary_row {
+#ceshmegouy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2069,16 +2056,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#qfzuvtemej .gt_first_summary_row {
+#ceshmegouy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qfzuvtemej .gt_first_summary_row.thick {
+#ceshmegouy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qfzuvtemej .gt_last_summary_row {
+#ceshmegouy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2088,7 +2075,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#qfzuvtemej .gt_grand_summary_row {
+#ceshmegouy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2098,7 +2085,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#qfzuvtemej .gt_first_grand_summary_row {
+#ceshmegouy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2108,7 +2095,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-#qfzuvtemej .gt_last_grand_summary_row_top {
+#ceshmegouy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2118,11 +2105,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#qfzuvtemej .gt_striped {
+#ceshmegouy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qfzuvtemej .gt_table_body {
+#ceshmegouy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2131,7 +2118,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#qfzuvtemej .gt_footnotes {
+#ceshmegouy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2145,7 +2132,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#qfzuvtemej .gt_footnote {
+#ceshmegouy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2154,7 +2141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#qfzuvtemej .gt_sourcenotes {
+#ceshmegouy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2168,7 +2155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#qfzuvtemej .gt_sourcenote {
+#ceshmegouy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2176,72 +2163,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#qfzuvtemej .gt_left {
+#ceshmegouy .gt_left {
   text-align: left;
 }
 
-#qfzuvtemej .gt_center {
+#ceshmegouy .gt_center {
   text-align: center;
 }
 
-#qfzuvtemej .gt_right {
+#ceshmegouy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qfzuvtemej .gt_font_normal {
+#ceshmegouy .gt_font_normal {
   font-weight: normal;
 }
 
-#qfzuvtemej .gt_font_bold {
+#ceshmegouy .gt_font_bold {
   font-weight: bold;
 }
 
-#qfzuvtemej .gt_font_italic {
+#ceshmegouy .gt_font_italic {
   font-style: italic;
 }
 
-#qfzuvtemej .gt_super {
+#ceshmegouy .gt_super {
   font-size: 65%;
 }
 
-#qfzuvtemej .gt_footnote_marks {
+#ceshmegouy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qfzuvtemej .gt_asterisk {
+#ceshmegouy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qfzuvtemej .gt_indent_1 {
+#ceshmegouy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qfzuvtemej .gt_indent_2 {
+#ceshmegouy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qfzuvtemej .gt_indent_3 {
+#ceshmegouy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qfzuvtemej .gt_indent_4 {
+#ceshmegouy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qfzuvtemej .gt_indent_5 {
+#ceshmegouy .gt_indent_5 {
   text-indent: 25px;
 }
 
-#qfzuvtemej .katex-display {
+#ceshmegouy .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#qfzuvtemej div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ceshmegouy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2314,27 +2301,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
 </table>
 </div>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="historia-olímpica-rio-2016.html#cb22-1" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb22-2"><a href="historia-olímpica-rio-2016.html#cb22-2" tabindex="-1"></a>  df_2016 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Sport <span class="sc">%in%</span> deportes_top, <span class="sc">!</span><span class="fu">is.na</span>(Weight)), </span>
-<span id="cb22-3"><a href="historia-olímpica-rio-2016.html#cb22-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Sport, <span class="at">y =</span> Weight, <span class="at">fill =</span> Sex)</span>
-<span id="cb22-4"><a href="historia-olímpica-rio-2016.html#cb22-4" tabindex="-1"></a>) <span class="sc">+</span></span>
-<span id="cb22-5"><a href="historia-olímpica-rio-2016.html#cb22-5" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.85</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width =</span> <span class="fl">0.8</span>), <span class="at">color =</span> <span class="st">&quot;#3D1534&quot;</span>) <span class="sc">+</span></span>
-<span id="cb22-6"><a href="historia-olímpica-rio-2016.html#cb22-6" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(</span>
-<span id="cb22-7"><a href="historia-olímpica-rio-2016.html#cb22-7" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;F&quot;</span> <span class="ot">=</span> <span class="st">&quot;#A6BCC9&quot;</span>, <span class="st">&quot;M&quot;</span> <span class="ot">=</span> <span class="st">&quot;#3E4B8E&quot;</span>),</span>
-<span id="cb22-8"><a href="historia-olímpica-rio-2016.html#cb22-8" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;F&quot;</span> <span class="ot">=</span> <span class="st">&quot;Femenino&quot;</span>, <span class="st">&quot;M&quot;</span> <span class="ot">=</span> <span class="st">&quot;Masculino&quot;</span>)</span>
-<span id="cb22-9"><a href="historia-olímpica-rio-2016.html#cb22-9" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb22-10"><a href="historia-olímpica-rio-2016.html#cb22-10" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb22-11"><a href="historia-olímpica-rio-2016.html#cb22-11" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Distribución de peso por sexo en medallistas (2016)&quot;</span>,</span>
-<span id="cb22-12"><a href="historia-olímpica-rio-2016.html#cb22-12" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Deporte&quot;</span>,</span>
-<span id="cb22-13"><a href="historia-olímpica-rio-2016.html#cb22-13" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Peso (kg)&quot;</span>,</span>
-<span id="cb22-14"><a href="historia-olímpica-rio-2016.html#cb22-14" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">&quot;Sexo&quot;</span></span>
-<span id="cb22-15"><a href="historia-olímpica-rio-2016.html#cb22-15" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb22-16"><a href="historia-olímpica-rio-2016.html#cb22-16" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb22-17"><a href="historia-olímpica-rio-2016.html#cb22-17" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb22-18"><a href="historia-olímpica-rio-2016.html#cb22-18" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="at">size =</span> <span class="dv">14</span>, <span class="at">color =</span> <span class="st">&quot;#3D1534&quot;</span>),</span>
-<span id="cb22-19"><a href="historia-olímpica-rio-2016.html#cb22-19" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">&quot;top&quot;</span>,</span>
-<span id="cb22-20"><a href="historia-olímpica-rio-2016.html#cb22-20" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
-<span id="cb22-21"><a href="historia-olímpica-rio-2016.html#cb22-21" tabindex="-1"></a>  )</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="historia-olímpica-rio-2016.html#cb13-1" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb13-2"><a href="historia-olímpica-rio-2016.html#cb13-2" tabindex="-1"></a>  df_2016 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Sport <span class="sc">%in%</span> deportes_top, <span class="sc">!</span><span class="fu">is.na</span>(Weight)), </span>
+<span id="cb13-3"><a href="historia-olímpica-rio-2016.html#cb13-3" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> Sport, <span class="at">y =</span> Weight, <span class="at">fill =</span> Sex)</span>
+<span id="cb13-4"><a href="historia-olímpica-rio-2016.html#cb13-4" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb13-5"><a href="historia-olímpica-rio-2016.html#cb13-5" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.85</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width =</span> <span class="fl">0.8</span>), <span class="at">color =</span> <span class="st">&quot;#3D1534&quot;</span>) <span class="sc">+</span></span>
+<span id="cb13-6"><a href="historia-olímpica-rio-2016.html#cb13-6" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(</span>
+<span id="cb13-7"><a href="historia-olímpica-rio-2016.html#cb13-7" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;F&quot;</span> <span class="ot">=</span> <span class="st">&quot;#A6BCC9&quot;</span>, <span class="st">&quot;M&quot;</span> <span class="ot">=</span> <span class="st">&quot;#3E4B8E&quot;</span>),</span>
+<span id="cb13-8"><a href="historia-olímpica-rio-2016.html#cb13-8" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;F&quot;</span> <span class="ot">=</span> <span class="st">&quot;Femenino&quot;</span>, <span class="st">&quot;M&quot;</span> <span class="ot">=</span> <span class="st">&quot;Masculino&quot;</span>)</span>
+<span id="cb13-9"><a href="historia-olímpica-rio-2016.html#cb13-9" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb13-10"><a href="historia-olímpica-rio-2016.html#cb13-10" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb13-11"><a href="historia-olímpica-rio-2016.html#cb13-11" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Distribución de peso por sexo en medallistas (2016)&quot;</span>,</span>
+<span id="cb13-12"><a href="historia-olímpica-rio-2016.html#cb13-12" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Deporte&quot;</span>,</span>
+<span id="cb13-13"><a href="historia-olímpica-rio-2016.html#cb13-13" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Peso (kg)&quot;</span>,</span>
+<span id="cb13-14"><a href="historia-olímpica-rio-2016.html#cb13-14" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">&quot;Sexo&quot;</span></span>
+<span id="cb13-15"><a href="historia-olímpica-rio-2016.html#cb13-15" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb13-16"><a href="historia-olímpica-rio-2016.html#cb13-16" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb13-17"><a href="historia-olímpica-rio-2016.html#cb13-17" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb13-18"><a href="historia-olímpica-rio-2016.html#cb13-18" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="at">size =</span> <span class="dv">14</span>, <span class="at">color =</span> <span class="st">&quot;#3D1534&quot;</span>),</span>
+<span id="cb13-19"><a href="historia-olímpica-rio-2016.html#cb13-19" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">&quot;top&quot;</span>,</span>
+<span id="cb13-20"><a href="historia-olímpica-rio-2016.html#cb13-20" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb13-21"><a href="historia-olímpica-rio-2016.html#cb13-21" tabindex="-1"></a>  )</span></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/grafica-boxplots-peso-1.png" width="672" /></p>
 </div>
 </div>
@@ -2398,20 +2385,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

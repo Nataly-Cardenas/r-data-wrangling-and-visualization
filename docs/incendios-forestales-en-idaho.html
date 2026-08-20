@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Tarea Visualización</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Ejercicio 1</a></li>
@@ -161,19 +161,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7" data-path="ejercicio-3.html"><a href="ejercicio-3.html#separaci%C3%B3n"><i class="fa fa-check"></i><b>2.7</b> Separación</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="ejercicio-4.html"><a href="ejercicio-4.html"><i class="fa fa-check"></i>Ejercicio 4</a></li>
-<li class="chapter" data-level="3" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>3</b> Introduction</a></li>
-<li class="chapter" data-level="4" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>4</b> Literature</a></li>
-<li class="chapter" data-level="5" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>5</b> Methods</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="methods.html"><a href="methods.html#math-example"><i class="fa fa-check"></i><b>5.1</b> math example</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>6</b> Applications</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>6.1</b> Example one</a></li>
-<li class="chapter" data-level="6.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>6.2</b> Example two</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>7</b> Final Words</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -196,7 +183,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="incendios-forestales-en-idaho" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">1</span> Incendios Forestales en Idaho<a href="incendios-forestales-en-idaho.html#incendios-forestales-en-idaho" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="incendios-forestales-en-idaho.html#cb11-1" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;C:/Users/natal/Desktop/bookdown/RDataSets/StudyArea.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="incendios-forestales-en-idaho.html#cb2-1" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;C:/Users/natal/Desktop/bookdown/RDataSets/StudyArea.csv&quot;</span>)</span></code></pre></div>
 <pre><code>## Rows: 439362 Columns: 14
 ## ── Column specification ───────────────────────────────────────────────────────────────────────────────────
 ## Delimiter: &quot;,&quot;
@@ -205,63 +192,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="incendios-forestales-en-idaho.html#cb13-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> </span>
-<span id="cb13-2"><a href="incendios-forestales-en-idaho.html#cb13-2" tabindex="-1"></a>  <span class="fu">filter</span>(STATE <span class="sc">==</span> <span class="st">&quot;Idaho&quot;</span>, <span class="sc">!</span><span class="fu">is.na</span>(CAUSE)) <span class="sc">%&gt;%</span> </span>
-<span id="cb13-3"><a href="incendios-forestales-en-idaho.html#cb13-3" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">year =</span> YEAR_, <span class="at">causa =</span> CAUSE, <span class="at">total =</span> TOTALACRES) <span class="sc">%&gt;%</span> </span>
-<span id="cb13-4"><a href="incendios-forestales-en-idaho.html#cb13-4" tabindex="-1"></a>  <span class="fu">group_by</span>(causa, year) <span class="sc">%&gt;%</span> </span>
-<span id="cb13-5"><a href="incendios-forestales-en-idaho.html#cb13-5" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb13-6"><a href="incendios-forestales-en-idaho.html#cb13-6" tabindex="-1"></a>    <span class="at">media =</span> <span class="fu">mean</span>(total, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb13-7"><a href="incendios-forestales-en-idaho.html#cb13-7" tabindex="-1"></a>    <span class="at">mediana =</span> <span class="fu">median</span>(total, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb13-8"><a href="incendios-forestales-en-idaho.html#cb13-8" tabindex="-1"></a>    <span class="at">RIC =</span> <span class="fu">IQR</span>(total, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb13-9"><a href="incendios-forestales-en-idaho.html#cb13-9" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span></span>
-<span id="cb13-10"><a href="incendios-forestales-en-idaho.html#cb13-10" tabindex="-1"></a>  )</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="incendios-forestales-en-idaho.html#cb4-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> datos <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="incendios-forestales-en-idaho.html#cb4-2" tabindex="-1"></a>  <span class="fu">filter</span>(STATE <span class="sc">==</span> <span class="st">&quot;Idaho&quot;</span>, <span class="sc">!</span><span class="fu">is.na</span>(CAUSE)) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="incendios-forestales-en-idaho.html#cb4-3" tabindex="-1"></a>  <span class="fu">select</span>(<span class="at">year =</span> YEAR_, <span class="at">causa =</span> CAUSE, <span class="at">total =</span> TOTALACRES) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-4"><a href="incendios-forestales-en-idaho.html#cb4-4" tabindex="-1"></a>  <span class="fu">group_by</span>(causa, year) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-5"><a href="incendios-forestales-en-idaho.html#cb4-5" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb4-6"><a href="incendios-forestales-en-idaho.html#cb4-6" tabindex="-1"></a>    <span class="at">media =</span> <span class="fu">mean</span>(total, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb4-7"><a href="incendios-forestales-en-idaho.html#cb4-7" tabindex="-1"></a>    <span class="at">mediana =</span> <span class="fu">median</span>(total, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb4-8"><a href="incendios-forestales-en-idaho.html#cb4-8" tabindex="-1"></a>    <span class="at">RIC =</span> <span class="fu">IQR</span>(total, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb4-9"><a href="incendios-forestales-en-idaho.html#cb4-9" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">&quot;drop&quot;</span></span>
+<span id="cb4-10"><a href="incendios-forestales-en-idaho.html#cb4-10" tabindex="-1"></a>  )</span></code></pre></div>
 <div id="resumen-estadístico" class="section level2 hasAnchor" number="1.1">
 <h2><span class="header-section-number">1.1</span> Resumen Estadístico<a href="incendios-forestales-en-idaho.html#resumen-estad%C3%ADstico" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="incendios-forestales-en-idaho.html#cb14-1" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
-<span id="cb14-2"><a href="incendios-forestales-en-idaho.html#cb14-2" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb14-3"><a href="incendios-forestales-en-idaho.html#cb14-3" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
-<span id="cb14-4"><a href="incendios-forestales-en-idaho.html#cb14-4" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
-<span id="cb14-5"><a href="incendios-forestales-en-idaho.html#cb14-5" tabindex="-1"></a>    <span class="at">title =</span> <span class="fu">md</span>(<span class="st">&quot;**Resumen Estadístico de Hectáreas Afectadas**&quot;</span>),</span>
-<span id="cb14-6"><a href="incendios-forestales-en-idaho.html#cb14-6" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Estado de Idaho por Causa y Año&quot;</span></span>
-<span id="cb14-7"><a href="incendios-forestales-en-idaho.html#cb14-7" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb14-8"><a href="incendios-forestales-en-idaho.html#cb14-8" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
-<span id="cb14-9"><a href="incendios-forestales-en-idaho.html#cb14-9" tabindex="-1"></a>    <span class="at">causa =</span> <span class="st">&quot;Causa&quot;</span>,</span>
-<span id="cb14-10"><a href="incendios-forestales-en-idaho.html#cb14-10" tabindex="-1"></a>    <span class="at">year =</span> <span class="st">&quot;Año&quot;</span>,</span>
-<span id="cb14-11"><a href="incendios-forestales-en-idaho.html#cb14-11" tabindex="-1"></a>    <span class="at">media =</span> <span class="st">&quot;Media (Acres)&quot;</span>,</span>
-<span id="cb14-12"><a href="incendios-forestales-en-idaho.html#cb14-12" tabindex="-1"></a>    <span class="at">mediana =</span> <span class="st">&quot;Mediana (Acres)&quot;</span>,</span>
-<span id="cb14-13"><a href="incendios-forestales-en-idaho.html#cb14-13" tabindex="-1"></a>    <span class="at">RIC =</span> <span class="st">&quot;RIC&quot;</span></span>
-<span id="cb14-14"><a href="incendios-forestales-en-idaho.html#cb14-14" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb14-15"><a href="incendios-forestales-en-idaho.html#cb14-15" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
-<span id="cb14-16"><a href="incendios-forestales-en-idaho.html#cb14-16" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">c</span>(media, mediana, RIC),</span>
-<span id="cb14-17"><a href="incendios-forestales-en-idaho.html#cb14-17" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span></span>
-<span id="cb14-18"><a href="incendios-forestales-en-idaho.html#cb14-18" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb14-19"><a href="incendios-forestales-en-idaho.html#cb14-19" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb14-20"><a href="incendios-forestales-en-idaho.html#cb14-20" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">&quot;#FFF4EB&quot;</span>), <span class="co"># Seashell</span></span>
-<span id="cb14-21"><a href="incendios-forestales-en-idaho.html#cb14-21" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">rows =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">2</span>))</span>
-<span id="cb14-22"><a href="incendios-forestales-en-idaho.html#cb14-22" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb14-23"><a href="incendios-forestales-en-idaho.html#cb14-23" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
-<span id="cb14-24"><a href="incendios-forestales-en-idaho.html#cb14-24" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="fu">pct</span>(<span class="dv">100</span>),</span>
-<span id="cb14-25"><a href="incendios-forestales-en-idaho.html#cb14-25" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">&quot;#3E4B8E&quot;</span>, <span class="co"># French Blue</span></span>
-<span id="cb14-26"><a href="incendios-forestales-en-idaho.html#cb14-26" tabindex="-1"></a>    <span class="at">column_labels.font.weight =</span> <span class="st">&quot;bold&quot;</span>,</span>
-<span id="cb14-27"><a href="incendios-forestales-en-idaho.html#cb14-27" tabindex="-1"></a>    <span class="at">heading.title.font.size =</span> <span class="fu">px</span>(<span class="dv">18</span>)</span>
-<span id="cb14-28"><a href="incendios-forestales-en-idaho.html#cb14-28" tabindex="-1"></a>  )</span></code></pre></div>
-<div id="msydhvwwld" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#msydhvwwld table {
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="incendios-forestales-en-idaho.html#cb5-1" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="incendios-forestales-en-idaho.html#cb5-2" tabindex="-1"></a>  <span class="fu">head</span>(<span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a href="incendios-forestales-en-idaho.html#cb5-3" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb5-4"><a href="incendios-forestales-en-idaho.html#cb5-4" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb5-5"><a href="incendios-forestales-en-idaho.html#cb5-5" tabindex="-1"></a>    <span class="at">title =</span> <span class="fu">md</span>(<span class="st">&quot;**Resumen Estadístico de Hectáreas Afectadas**&quot;</span>),</span>
+<span id="cb5-6"><a href="incendios-forestales-en-idaho.html#cb5-6" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Estado de Idaho por Causa y Año&quot;</span></span>
+<span id="cb5-7"><a href="incendios-forestales-en-idaho.html#cb5-7" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-8"><a href="incendios-forestales-en-idaho.html#cb5-8" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
+<span id="cb5-9"><a href="incendios-forestales-en-idaho.html#cb5-9" tabindex="-1"></a>    <span class="at">causa =</span> <span class="st">&quot;Causa&quot;</span>,</span>
+<span id="cb5-10"><a href="incendios-forestales-en-idaho.html#cb5-10" tabindex="-1"></a>    <span class="at">year =</span> <span class="st">&quot;Año&quot;</span>,</span>
+<span id="cb5-11"><a href="incendios-forestales-en-idaho.html#cb5-11" tabindex="-1"></a>    <span class="at">media =</span> <span class="st">&quot;Media (Acres)&quot;</span>,</span>
+<span id="cb5-12"><a href="incendios-forestales-en-idaho.html#cb5-12" tabindex="-1"></a>    <span class="at">mediana =</span> <span class="st">&quot;Mediana (Acres)&quot;</span>,</span>
+<span id="cb5-13"><a href="incendios-forestales-en-idaho.html#cb5-13" tabindex="-1"></a>    <span class="at">RIC =</span> <span class="st">&quot;RIC&quot;</span></span>
+<span id="cb5-14"><a href="incendios-forestales-en-idaho.html#cb5-14" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-15"><a href="incendios-forestales-en-idaho.html#cb5-15" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
+<span id="cb5-16"><a href="incendios-forestales-en-idaho.html#cb5-16" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">c</span>(media, mediana, RIC),</span>
+<span id="cb5-17"><a href="incendios-forestales-en-idaho.html#cb5-17" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">2</span></span>
+<span id="cb5-18"><a href="incendios-forestales-en-idaho.html#cb5-18" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-19"><a href="incendios-forestales-en-idaho.html#cb5-19" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb5-20"><a href="incendios-forestales-en-idaho.html#cb5-20" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">&quot;#FFF4EB&quot;</span>), <span class="co"># Seashell</span></span>
+<span id="cb5-21"><a href="incendios-forestales-en-idaho.html#cb5-21" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">rows =</span> <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">2</span>))</span>
+<span id="cb5-22"><a href="incendios-forestales-en-idaho.html#cb5-22" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-23"><a href="incendios-forestales-en-idaho.html#cb5-23" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb5-24"><a href="incendios-forestales-en-idaho.html#cb5-24" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="fu">pct</span>(<span class="dv">100</span>),</span>
+<span id="cb5-25"><a href="incendios-forestales-en-idaho.html#cb5-25" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">&quot;#3E4B8E&quot;</span>, <span class="co"># French Blue</span></span>
+<span id="cb5-26"><a href="incendios-forestales-en-idaho.html#cb5-26" tabindex="-1"></a>    <span class="at">column_labels.font.weight =</span> <span class="st">&quot;bold&quot;</span>,</span>
+<span id="cb5-27"><a href="incendios-forestales-en-idaho.html#cb5-27" tabindex="-1"></a>    <span class="at">heading.title.font.size =</span> <span class="fu">px</span>(<span class="dv">18</span>)</span>
+<span id="cb5-28"><a href="incendios-forestales-en-idaho.html#cb5-28" tabindex="-1"></a>  )</span></code></pre></div>
+<div id="xwdtrmuviq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xwdtrmuviq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#msydhvwwld thead, #msydhvwwld tbody, #msydhvwwld tfoot, #msydhvwwld tr, #msydhvwwld td, #msydhvwwld th {
+#xwdtrmuviq thead, #xwdtrmuviq tbody, #xwdtrmuviq tfoot, #xwdtrmuviq tr, #xwdtrmuviq td, #xwdtrmuviq th {
   border-style: none;
 }
 
-#msydhvwwld p {
+#xwdtrmuviq p {
   margin: 0;
   padding: 0;
 }
 
-#msydhvwwld .gt_table {
+#xwdtrmuviq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -287,12 +274,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-#msydhvwwld .gt_caption {
+#xwdtrmuviq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#msydhvwwld .gt_title {
+#xwdtrmuviq .gt_title {
   color: #333333;
   font-size: 18px;
   font-weight: initial;
@@ -304,7 +291,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-#msydhvwwld .gt_subtitle {
+#xwdtrmuviq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -316,7 +303,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-#msydhvwwld .gt_heading {
+#xwdtrmuviq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -328,13 +315,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#msydhvwwld .gt_bottom_border {
+#xwdtrmuviq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#msydhvwwld .gt_col_headings {
+#xwdtrmuviq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -349,7 +336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#msydhvwwld .gt_col_heading {
+#xwdtrmuviq .gt_col_heading {
   color: #FFFFFF;
   background-color: #3E4B8E;
   font-size: 100%;
@@ -369,7 +356,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#msydhvwwld .gt_column_spanner_outer {
+#xwdtrmuviq .gt_column_spanner_outer {
   color: #FFFFFF;
   background-color: #3E4B8E;
   font-size: 100%;
@@ -381,15 +368,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-#msydhvwwld .gt_column_spanner_outer:first-child {
+#xwdtrmuviq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#msydhvwwld .gt_column_spanner_outer:last-child {
+#xwdtrmuviq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#msydhvwwld .gt_column_spanner {
+#xwdtrmuviq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -401,11 +388,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-#msydhvwwld .gt_spanner_row {
+#xwdtrmuviq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#msydhvwwld .gt_group_heading {
+#xwdtrmuviq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -431,7 +418,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   text-align: left;
 }
 
-#msydhvwwld .gt_empty_group_heading {
+#xwdtrmuviq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -446,15 +433,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-#msydhvwwld .gt_from_md > :first-child {
+#xwdtrmuviq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#msydhvwwld .gt_from_md > :last-child {
+#xwdtrmuviq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#msydhvwwld .gt_row {
+#xwdtrmuviq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -473,7 +460,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-#msydhvwwld .gt_stub {
+#xwdtrmuviq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -486,7 +473,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#msydhvwwld .gt_stub_row_group {
+#xwdtrmuviq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -500,15 +487,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: top;
 }
 
-#msydhvwwld .gt_row_group_first td {
+#xwdtrmuviq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#msydhvwwld .gt_row_group_first th {
+#xwdtrmuviq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#msydhvwwld .gt_summary_row {
+#xwdtrmuviq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -518,16 +505,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#msydhvwwld .gt_first_summary_row {
+#xwdtrmuviq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#msydhvwwld .gt_first_summary_row.thick {
+#xwdtrmuviq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#msydhvwwld .gt_last_summary_row {
+#xwdtrmuviq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -537,7 +524,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#msydhvwwld .gt_grand_summary_row {
+#xwdtrmuviq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -547,7 +534,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#msydhvwwld .gt_first_grand_summary_row {
+#xwdtrmuviq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -557,7 +544,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-#msydhvwwld .gt_last_grand_summary_row_top {
+#xwdtrmuviq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -567,11 +554,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#msydhvwwld .gt_striped {
+#xwdtrmuviq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#msydhvwwld .gt_table_body {
+#xwdtrmuviq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -580,7 +567,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-#msydhvwwld .gt_footnotes {
+#xwdtrmuviq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -594,7 +581,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#msydhvwwld .gt_footnote {
+#xwdtrmuviq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -603,7 +590,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#msydhvwwld .gt_sourcenotes {
+#xwdtrmuviq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -617,7 +604,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-#msydhvwwld .gt_sourcenote {
+#xwdtrmuviq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -625,72 +612,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-#msydhvwwld .gt_left {
+#xwdtrmuviq .gt_left {
   text-align: left;
 }
 
-#msydhvwwld .gt_center {
+#xwdtrmuviq .gt_center {
   text-align: center;
 }
 
-#msydhvwwld .gt_right {
+#xwdtrmuviq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#msydhvwwld .gt_font_normal {
+#xwdtrmuviq .gt_font_normal {
   font-weight: normal;
 }
 
-#msydhvwwld .gt_font_bold {
+#xwdtrmuviq .gt_font_bold {
   font-weight: bold;
 }
 
-#msydhvwwld .gt_font_italic {
+#xwdtrmuviq .gt_font_italic {
   font-style: italic;
 }
 
-#msydhvwwld .gt_super {
+#xwdtrmuviq .gt_super {
   font-size: 65%;
 }
 
-#msydhvwwld .gt_footnote_marks {
+#xwdtrmuviq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#msydhvwwld .gt_asterisk {
+#xwdtrmuviq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#msydhvwwld .gt_indent_1 {
+#xwdtrmuviq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#msydhvwwld .gt_indent_2 {
+#xwdtrmuviq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#msydhvwwld .gt_indent_3 {
+#xwdtrmuviq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#msydhvwwld .gt_indent_4 {
+#xwdtrmuviq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#msydhvwwld .gt_indent_5 {
+#xwdtrmuviq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#msydhvwwld .katex-display {
+#xwdtrmuviq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#msydhvwwld div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#xwdtrmuviq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -768,31 +755,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="evolución-temporal-del-impacto" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> Evolución Temporal del Impacto<a href="incendios-forestales-en-idaho.html#evoluci%C3%B3n-temporal-del-impacto" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="incendios-forestales-en-idaho.html#cb15-1" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> media, <span class="at">color =</span> causa, <span class="at">group =</span> causa)) <span class="sc">+</span></span>
-<span id="cb15-2"><a href="incendios-forestales-en-idaho.html#cb15-2" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.2</span>, <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
-<span id="cb15-3"><a href="incendios-forestales-en-idaho.html#cb15-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.8</span>) <span class="sc">+</span></span>
-<span id="cb15-4"><a href="incendios-forestales-en-idaho.html#cb15-4" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> scales<span class="sc">::</span><span class="fu">pretty_breaks</span>(<span class="at">n =</span> <span class="dv">8</span>)) <span class="sc">+</span></span>
-<span id="cb15-5"><a href="incendios-forestales-en-idaho.html#cb15-5" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">comma_format</span>()) <span class="sc">+</span></span>
-<span id="cb15-6"><a href="incendios-forestales-en-idaho.html#cb15-6" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(</span>
-<span id="cb15-7"><a href="incendios-forestales-en-idaho.html#cb15-7" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">unname</span>(paleta_custom[<span class="fu">c</span>(<span class="st">&quot;French Blue&quot;</span>, <span class="st">&quot;Powder Blue&quot;</span>, <span class="st">&quot;Wheat&quot;</span>, <span class="st">&quot;Midnight Violet&quot;</span>)]),</span>
-<span id="cb15-8"><a href="incendios-forestales-en-idaho.html#cb15-8" tabindex="-1"></a>    <span class="at">na.value =</span> <span class="st">&quot;#A6BCC9&quot;</span></span>
-<span id="cb15-9"><a href="incendios-forestales-en-idaho.html#cb15-9" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb15-10"><a href="incendios-forestales-en-idaho.html#cb15-10" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb15-11"><a href="incendios-forestales-en-idaho.html#cb15-11" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Promedio de acres afectados por causa en Idaho&quot;</span>,</span>
-<span id="cb15-12"><a href="incendios-forestales-en-idaho.html#cb15-12" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Evolución histórica según causa registrada&quot;</span>,</span>
-<span id="cb15-13"><a href="incendios-forestales-en-idaho.html#cb15-13" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Año&quot;</span>,</span>
-<span id="cb15-14"><a href="incendios-forestales-en-idaho.html#cb15-14" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Promedio de acres&quot;</span>,</span>
-<span id="cb15-15"><a href="incendios-forestales-en-idaho.html#cb15-15" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">&quot;Causa&quot;</span></span>
-<span id="cb15-16"><a href="incendios-forestales-en-idaho.html#cb15-16" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb15-17"><a href="incendios-forestales-en-idaho.html#cb15-17" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb15-18"><a href="incendios-forestales-en-idaho.html#cb15-18" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb15-19"><a href="incendios-forestales-en-idaho.html#cb15-19" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="at">size =</span> <span class="dv">14</span>, <span class="at">color =</span> <span class="st">&quot;#3D1534&quot;</span>),</span>
-<span id="cb15-20"><a href="incendios-forestales-en-idaho.html#cb15-20" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>, <span class="at">color =</span> <span class="st">&quot;#3E4B8E&quot;</span>),</span>
-<span id="cb15-21"><a href="incendios-forestales-en-idaho.html#cb15-21" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>,</span>
-<span id="cb15-22"><a href="incendios-forestales-en-idaho.html#cb15-22" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;#FFF4EB&quot;</span>, <span class="at">color =</span> <span class="cn">NA</span>),</span>
-<span id="cb15-23"><a href="incendios-forestales-en-idaho.html#cb15-23" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">&quot;#A6BCC9&quot;</span>),</span>
-<span id="cb15-24"><a href="incendios-forestales-en-idaho.html#cb15-24" tabindex="-1"></a>    <span class="at">panel.grid.major.y =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">&quot;#F6E0B6&quot;</span>)</span>
-<span id="cb15-25"><a href="incendios-forestales-en-idaho.html#cb15-25" tabindex="-1"></a>  )</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="incendios-forestales-en-idaho.html#cb6-1" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> media, <span class="at">color =</span> causa, <span class="at">group =</span> causa)) <span class="sc">+</span></span>
+<span id="cb6-2"><a href="incendios-forestales-en-idaho.html#cb6-2" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.2</span>, <span class="at">alpha =</span> <span class="fl">0.9</span>) <span class="sc">+</span></span>
+<span id="cb6-3"><a href="incendios-forestales-en-idaho.html#cb6-3" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.8</span>) <span class="sc">+</span></span>
+<span id="cb6-4"><a href="incendios-forestales-en-idaho.html#cb6-4" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> scales<span class="sc">::</span><span class="fu">pretty_breaks</span>(<span class="at">n =</span> <span class="dv">8</span>)) <span class="sc">+</span></span>
+<span id="cb6-5"><a href="incendios-forestales-en-idaho.html#cb6-5" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">comma_format</span>()) <span class="sc">+</span></span>
+<span id="cb6-6"><a href="incendios-forestales-en-idaho.html#cb6-6" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(</span>
+<span id="cb6-7"><a href="incendios-forestales-en-idaho.html#cb6-7" tabindex="-1"></a>    <span class="at">values =</span> <span class="fu">unname</span>(paleta_custom[<span class="fu">c</span>(<span class="st">&quot;French Blue&quot;</span>, <span class="st">&quot;Powder Blue&quot;</span>, <span class="st">&quot;Wheat&quot;</span>, <span class="st">&quot;Midnight Violet&quot;</span>)]),</span>
+<span id="cb6-8"><a href="incendios-forestales-en-idaho.html#cb6-8" tabindex="-1"></a>    <span class="at">na.value =</span> <span class="st">&quot;#A6BCC9&quot;</span></span>
+<span id="cb6-9"><a href="incendios-forestales-en-idaho.html#cb6-9" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-10"><a href="incendios-forestales-en-idaho.html#cb6-10" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb6-11"><a href="incendios-forestales-en-idaho.html#cb6-11" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">&quot;Promedio de acres afectados por causa en Idaho&quot;</span>,</span>
+<span id="cb6-12"><a href="incendios-forestales-en-idaho.html#cb6-12" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">&quot;Evolución histórica según causa registrada&quot;</span>,</span>
+<span id="cb6-13"><a href="incendios-forestales-en-idaho.html#cb6-13" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Año&quot;</span>,</span>
+<span id="cb6-14"><a href="incendios-forestales-en-idaho.html#cb6-14" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Promedio de acres&quot;</span>,</span>
+<span id="cb6-15"><a href="incendios-forestales-en-idaho.html#cb6-15" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">&quot;Causa&quot;</span></span>
+<span id="cb6-16"><a href="incendios-forestales-en-idaho.html#cb6-16" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-17"><a href="incendios-forestales-en-idaho.html#cb6-17" tabindex="-1"></a>  <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb6-18"><a href="incendios-forestales-en-idaho.html#cb6-18" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb6-19"><a href="incendios-forestales-en-idaho.html#cb6-19" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="at">size =</span> <span class="dv">14</span>, <span class="at">color =</span> <span class="st">&quot;#3D1534&quot;</span>),</span>
+<span id="cb6-20"><a href="incendios-forestales-en-idaho.html#cb6-20" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>, <span class="at">color =</span> <span class="st">&quot;#3E4B8E&quot;</span>),</span>
+<span id="cb6-21"><a href="incendios-forestales-en-idaho.html#cb6-21" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">&quot;bottom&quot;</span>,</span>
+<span id="cb6-22"><a href="incendios-forestales-en-idaho.html#cb6-22" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">&quot;#FFF4EB&quot;</span>, <span class="at">color =</span> <span class="cn">NA</span>),</span>
+<span id="cb6-23"><a href="incendios-forestales-en-idaho.html#cb6-23" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">&quot;#A6BCC9&quot;</span>),</span>
+<span id="cb6-24"><a href="incendios-forestales-en-idaho.html#cb6-24" tabindex="-1"></a>    <span class="at">panel.grid.major.y =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">&quot;#F6E0B6&quot;</span>)</span>
+<span id="cb6-25"><a href="incendios-forestales-en-idaho.html#cb6-25" tabindex="-1"></a>  )</span></code></pre></div>
 <p><img src="bookdown-demo_files/figure-html/grafica-incendios-1.png" width="672" /></p>
 </div>
 </div>
@@ -856,20 +843,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

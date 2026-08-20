@@ -1,5 +1,3 @@
-fig:nice-fig
-tab:nice-tab
 incendios-forestales-en-idaho
 resumen-estadístico
 evolución-temporal-del-impacto
@@ -11,11 +9,3 @@ análisis-del-peso-por-sexo
 nuevo-dataframe-con-las-nuevas-columnas-year-y-population
 unión
 separación
-intro
-literature
-methods
-math-example
-applications
-example-one
-example-two
-final-words

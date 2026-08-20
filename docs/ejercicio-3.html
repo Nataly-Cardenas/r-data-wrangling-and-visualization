@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Tarea Visualización</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Ejercicio 1</a></li>
@@ -161,19 +161,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7" data-path="ejercicio-3.html"><a href="ejercicio-3.html#separaci%C3%B3n"><i class="fa fa-check"></i><b>2.7</b> Separación</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="ejercicio-4.html"><a href="ejercicio-4.html"><i class="fa fa-check"></i>Ejercicio 4</a></li>
-<li class="chapter" data-level="3" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>3</b> Introduction</a></li>
-<li class="chapter" data-level="4" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>4</b> Literature</a></li>
-<li class="chapter" data-level="5" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>5</b> Methods</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="methods.html"><a href="methods.html#math-example"><i class="fa fa-check"></i><b>5.1</b> math example</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>6</b> Applications</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>6.1</b> Example one</a></li>
-<li class="chapter" data-level="6.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>6.2</b> Example two</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>7</b> Final Words</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -201,11 +188,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Repita el procedimiento planteado en cada ítem de esta sección para obtener el <strong>nuevo dataframe con las nuevas columnas Year y Population</strong>.</li>
 <li>Realice <strong>unión y separación utilizando las columnas State y Code</strong>.</li>
 </ul>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="ejercicio-3.html#cb23-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb23-2"><a href="ejercicio-3.html#cb23-2" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb23-3"><a href="ejercicio-3.html#cb23-3" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">&quot;C:/Users/natal/Downloads/us_state_population.tsv&quot;</span>, </span>
-<span id="cb23-4"><a href="ejercicio-3.html#cb23-4" tabindex="-1"></a>    <span class="at">delim =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">escape_double =</span> <span class="cn">FALSE</span>, </span>
-<span id="cb23-5"><a href="ejercicio-3.html#cb23-5" tabindex="-1"></a>    <span class="at">trim_ws =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="ejercicio-3.html#cb14-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb14-2"><a href="ejercicio-3.html#cb14-2" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb14-3"><a href="ejercicio-3.html#cb14-3" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_delim</span>(<span class="st">&quot;C:/Users/natal/Downloads/us_state_population.tsv&quot;</span>, </span>
+<span id="cb14-4"><a href="ejercicio-3.html#cb14-4" tabindex="-1"></a>    <span class="at">delim =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">escape_double =</span> <span class="cn">FALSE</span>, </span>
+<span id="cb14-5"><a href="ejercicio-3.html#cb14-5" tabindex="-1"></a>    <span class="at">trim_ws =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## Rows: 51 Columns: 11
 ## ── Column specification ───────────────────────────────────────────────────────────────────────────────────
 ## Delimiter: &quot;\t&quot;
@@ -214,7 +201,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
 ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="ejercicio-3.html#cb25-1" tabindex="-1"></a>df</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="ejercicio-3.html#cb16-1" tabindex="-1"></a>df</span></code></pre></div>
 <pre><code>## # A tibble: 51 × 11
 ##    State                Code    `2010`   `2011`   `2012`   `2013`   `2014`   `2015`   `2016`  `2017` `2018`
 ##    &lt;chr&gt;                &lt;chr&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;
@@ -231,12 +218,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## # ℹ 41 more rows</code></pre>
 <div id="nuevo-dataframe-con-las-nuevas-columnas-year-y-population" class="section level2 hasAnchor" number="2.5">
 <h2><span class="header-section-number">2.5</span> Nuevo dataframe con las nuevas columnas Year y Population<a href="ejercicio-3.html#nuevo-dataframe-con-las-nuevas-columnas-year-y-population" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="ejercicio-3.html#cb27-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb27-2"><a href="ejercicio-3.html#cb27-2" tabindex="-1"></a>df2 <span class="ot">=</span> df <span class="sc">%&gt;%</span> </span>
-<span id="cb27-3"><a href="ejercicio-3.html#cb27-3" tabindex="-1"></a>  <span class="fu">gather</span>(<span class="st">&quot;2010&quot;</span>,<span class="st">&quot;2011&quot;</span>,<span class="st">&quot;2012&quot;</span>,<span class="st">&quot;2013&quot;</span>,<span class="st">&quot;2014&quot;</span>,<span class="st">&quot;2015&quot;</span>,<span class="st">&quot;2016&quot;</span>,<span class="st">&quot;2017&quot;</span>,<span class="st">&quot;2018&quot;</span>,</span>
-<span id="cb27-4"><a href="ejercicio-3.html#cb27-4" tabindex="-1"></a>         <span class="at">key =</span> <span class="st">&quot;Year&quot;</span>,</span>
-<span id="cb27-5"><a href="ejercicio-3.html#cb27-5" tabindex="-1"></a>         <span class="at">value =</span> <span class="st">&#39;population&#39;</span>)</span>
-<span id="cb27-6"><a href="ejercicio-3.html#cb27-6" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(df2, <span class="dv">5</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="ejercicio-3.html#cb18-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb18-2"><a href="ejercicio-3.html#cb18-2" tabindex="-1"></a>df2 <span class="ot">=</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb18-3"><a href="ejercicio-3.html#cb18-3" tabindex="-1"></a>  <span class="fu">gather</span>(<span class="st">&quot;2010&quot;</span>,<span class="st">&quot;2011&quot;</span>,<span class="st">&quot;2012&quot;</span>,<span class="st">&quot;2013&quot;</span>,<span class="st">&quot;2014&quot;</span>,<span class="st">&quot;2015&quot;</span>,<span class="st">&quot;2016&quot;</span>,<span class="st">&quot;2017&quot;</span>,<span class="st">&quot;2018&quot;</span>,</span>
+<span id="cb18-4"><a href="ejercicio-3.html#cb18-4" tabindex="-1"></a>         <span class="at">key =</span> <span class="st">&quot;Year&quot;</span>,</span>
+<span id="cb18-5"><a href="ejercicio-3.html#cb18-5" tabindex="-1"></a>         <span class="at">value =</span> <span class="st">&#39;population&#39;</span>)</span>
+<span id="cb18-6"><a href="ejercicio-3.html#cb18-6" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(df2, <span class="dv">5</span>))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -282,9 +269,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="unión" class="section level2 hasAnchor" number="2.6">
 <h2><span class="header-section-number">2.6</span> unión<a href="ejercicio-3.html#uni%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="ejercicio-3.html#cb28-1" tabindex="-1"></a>df_unido <span class="ot">&lt;-</span> df2 <span class="sc">%&gt;%</span></span>
-<span id="cb28-2"><a href="ejercicio-3.html#cb28-2" tabindex="-1"></a>  <span class="fu">unite</span>(<span class="st">&quot;State-Code&quot;</span>, State, Code, <span class="at">sep =</span> <span class="st">&quot;-&quot;</span>)</span>
-<span id="cb28-3"><a href="ejercicio-3.html#cb28-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(df_unido)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="ejercicio-3.html#cb19-1" tabindex="-1"></a>df_unido <span class="ot">&lt;-</span> df2 <span class="sc">%&gt;%</span></span>
+<span id="cb19-2"><a href="ejercicio-3.html#cb19-2" tabindex="-1"></a>  <span class="fu">unite</span>(<span class="st">&quot;State-Code&quot;</span>, State, Code, <span class="at">sep =</span> <span class="st">&quot;-&quot;</span>)</span>
+<span id="cb19-3"><a href="ejercicio-3.html#cb19-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(df_unido)</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -2594,12 +2581,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="separación" class="section level2 hasAnchor" number="2.7">
 <h2><span class="header-section-number">2.7</span> Separación<a href="ejercicio-3.html#separaci%C3%B3n" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="ejercicio-3.html#cb29-1" tabindex="-1"></a>df_separado <span class="ot">&lt;-</span> df_unido <span class="sc">%&gt;%</span> </span>
-<span id="cb29-2"><a href="ejercicio-3.html#cb29-2" tabindex="-1"></a>  <span class="fu">separate</span>(<span class="st">&#39;State-Code&#39;</span>,</span>
-<span id="cb29-3"><a href="ejercicio-3.html#cb29-3" tabindex="-1"></a>           <span class="at">into=</span><span class="fu">c</span>(<span class="st">&#39;State&#39;</span>, <span class="st">&#39;Code&#39;</span>))<span class="ot">-&gt;</span> df_sol_3</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="ejercicio-3.html#cb20-1" tabindex="-1"></a>df_separado <span class="ot">&lt;-</span> df_unido <span class="sc">%&gt;%</span> </span>
+<span id="cb20-2"><a href="ejercicio-3.html#cb20-2" tabindex="-1"></a>  <span class="fu">separate</span>(<span class="st">&#39;State-Code&#39;</span>,</span>
+<span id="cb20-3"><a href="ejercicio-3.html#cb20-3" tabindex="-1"></a>           <span class="at">into=</span><span class="fu">c</span>(<span class="st">&#39;State&#39;</span>, <span class="st">&#39;Code&#39;</span>))<span class="ot">-&gt;</span> df_sol_3</span></code></pre></div>
 <pre><code>## Warning: Expected 2 pieces. Additional pieces discarded in 99 rows [9, 30, 31, 32, 33, 34, 35, 40, 41, 42, 49, 60,
 ## 81, 82, 83, 84, 85, 86, 91, 92, ...].</code></pre>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="ejercicio-3.html#cb31-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(df_separado, <span class="dv">5</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="ejercicio-3.html#cb22-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(df_separado, <span class="dv">5</span>))</span></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -2704,20 +2691,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
