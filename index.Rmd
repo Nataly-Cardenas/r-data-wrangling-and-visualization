@@ -521,4 +521,6 @@ df %>%
   )
 
 ```
+
+
 La gráfica muestra una fuerte concentración de incendios en áreas pequeñas, mientras que los casos con grandes extensiones de acres son mucho menos frecuentes. Esto indica una distribución altamente sesgada a la derecha, con algunos incendios de gran magnitud que actúan como valores extremos.
