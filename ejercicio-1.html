@@ -140,7 +140,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Ejercicio 1</a></li>
+<li class="chapter" data-level="" data-path="ejercicio-1.html"><a href="ejercicio-1.html"><i class="fa fa-check"></i>Ejercicio 1</a></li>
 <li class="chapter" data-level="1" data-path="incendios-forestales-en-idaho.html"><a href="incendios-forestales-en-idaho.html"><i class="fa fa-check"></i><b>1</b> Incendios Forestales en Idaho</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="incendios-forestales-en-idaho.html"><a href="incendios-forestales-en-idaho.html#resumen-estad%C3%ADstico"><i class="fa fa-check"></i><b>1.1</b> Resumen Estadístico</a></li>
@@ -161,19 +161,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.7" data-path="ejercicio-3.html"><a href="ejercicio-3.html#separaci%C3%B3n"><i class="fa fa-check"></i><b>2.7</b> Separación</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="ejercicio-4.html"><a href="ejercicio-4.html"><i class="fa fa-check"></i>Ejercicio 4</a></li>
-<li class="chapter" data-level="3" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>3</b> Introduction</a></li>
-<li class="chapter" data-level="4" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>4</b> Literature</a></li>
-<li class="chapter" data-level="5" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>5</b> Methods</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="methods.html"><a href="methods.html#math-example"><i class="fa fa-check"></i><b>5.1</b> math example</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>6</b> Applications</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>6.1</b> Example one</a></li>
-<li class="chapter" data-level="6.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>6.2</b> Example two</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>7</b> Final Words</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -200,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p class="date"><em>2026-08-19</em></p>
 </div>
 <div id="ejercicio-1" class="section level1 unnumbered hasAnchor">
-<h1>Ejercicio 1<a href="index.html#ejercicio-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<h1>Ejercicio 1<a href="ejercicio-1.html#ejercicio-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>A partir del dataset df, el cual trata de los incendios forestales, realice las siguientes tareas:
 Filtrar los registros para incluir únicamente los incendios ocurridos en el estado de Idaho.
 Seleccionar únicamente las columnas YEAR_, CAUSE y TOTALACRES.
@@ -246,7 +233,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/%s",
     "text": "Edit"
   },
   "history": {
@@ -257,11 +244,8 @@ gitbook.start({
     "link": null,
     "text": null
   },
-  "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
+  "download": null,
+  "search": false,
   "toc": {
     "collapse": "subsection"
   }
@@ -269,20 +253,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

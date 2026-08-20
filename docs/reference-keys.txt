@@ -1,6 +1,16 @@
 fig:nice-fig
 tab:nice-tab
-prerequisites
+incendios-forestales-en-idaho
+resumen-estadístico
+evolución-temporal-del-impacto
+historia-olímpica-rio-2016
+top-5-deportes-con-más-medallas-en-2016
+distribución-de-edad-de-los-medallistas
+equipos-líderes-por-deporte
+análisis-del-peso-por-sexo
+nuevo-dataframe-con-las-nuevas-columnas-year-y-population
+unión
+separación
 intro
 literature
 methods

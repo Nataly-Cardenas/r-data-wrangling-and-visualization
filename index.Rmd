@@ -1,0 +1,524 @@
+---
+title: "Tarea visualización"
+author: "Nátaly Cárdenas y laura rivera"
+date: "2026-08-19"
+output:
+  html_document:
+    theme: flatly
+    highlight: tango
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+    toc_depth: 3
+    df_print: paged
+---
+
+```{=html}
+<style>
+/* ============================================================
+   IDENTIDAD VISUAL — paleta_custom
+   Seashell #FFF4EB · Wheat #F6E0B6 · Powder Blue #A6BCC9
+   French Blue #3E4B8E · Midnight Violet #3D1534
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --seashell: #FFF4EB;
+  --wheat: #F6E0B6;
+  --powderblue: #A6BCC9;
+  --frenchblue: #3E4B8E;
+  --midnight: #3D1534;
+}
+
+body{
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #2b2b33;
+  background-color: #FFFDFB;
+  line-height: 1.7;
+}
+
+/* ---------- Portada ---------- */
+.title{
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 2.6rem;
+  color: var(--midnight);
+  background: linear-gradient(90deg, var(--midnight), var(--frenchblue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.2em;
+}
+h4.author, h4.date{
+  font-family: 'Inter', sans-serif;
+  color: var(--frenchblue);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Encabezados ---------- */
+h1{
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  color: var(--midnight);
+  border-bottom: 3px solid var(--wheat);
+  padding-bottom: 0.35em;
+  margin-top: 2.4em;
+  letter-spacing: 0.01em;
+}
+h2{
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  color: var(--frenchblue);
+  border-left: 5px solid var(--powderblue);
+  padding-left: 0.6em;
+  margin-top: 1.8em;
+}
+h3{
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--midnight);
+  margin-top: 1.4em;
+}
+
+/* ---------- Enlaces ---------- */
+a, a:hover{ color: var(--frenchblue); }
+
+/* ---------- Separadores ---------- */
+hr{
+  border: none;
+  height: 2px;
+  margin: 2.5em 0;
+  background: linear-gradient(90deg, var(--seashell), var(--wheat), var(--powderblue), var(--frenchblue));
+  opacity: 0.7;
+}
+
+/* ---------- Bloques de código ---------- */
+pre, pre code{
+  font-family: 'Fira Code', 'Consolas', monospace !important;
+  font-size: 0.86rem;
+}
+div.sourceCode, pre.r{
+  background-color: #FBF7F2;
+  border-left: 4px solid var(--frenchblue);
+  border-radius: 6px;
+  padding: 0.6em;
+}
+pre:not(.r){
+  background-color: #F5F0EA;
+  border-radius: 6px;
+  border-left: 4px solid var(--powderblue);
+}
+
+/* ---------- Citas / notas destacadas ---------- */
+blockquote{
+  background-color: var(--seashell);
+  border-left: 5px solid var(--wheat);
+  padding: 0.8em 1.2em;
+  border-radius: 4px;
+  color: #4a3c33;
+}
+
+/* ---------- Tablas: aplica a knitr::kable(), df_print: paged
+   y cualquier <table> plano — sin tocar el código R ---------- */
+table{
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.4em auto;
+  box-shadow: 0 2px 10px rgba(61, 21, 52, 0.07);
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+table thead th, table th{
+  background-color: var(--frenchblue) !important;
+  color: #ffffff !important;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  border: none !important;
+}
+table td{
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--wheat);
+}
+table tbody tr:nth-child(even) td{
+  background-color: var(--seashell);
+}
+table tbody tr:hover td{
+  background-color: var(--powderblue);
+  transition: background-color 0.2s ease;
+}
+
+/* ---------- Tabla de contenido flotante ---------- */
+#TOC{
+  font-family: 'Inter', sans-serif;
+  background-color: var(--seashell);
+  border-radius: 8px;
+  border: 1px solid var(--wheat);
+}
+#TOC .toc-content a{
+  color: var(--midnight);
+}
+#TOC .toc-content a:hover{
+  color: var(--frenchblue);
+}
+
+/* ---------- Imágenes / gráficas ---------- */
+img{
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(61, 21, 52, 0.08);
+}
+</style>
+```
+
+```{r librerias}
+library(tidyverse)
+library(gt)
+library(scales)
+
+# Definición de la paleta personalizada
+paleta_custom <- c(
+  "Seashell"        = "#FFF4EB",
+  "Wheat"           = "#F6E0B6",
+  "Powder Blue"     = "#A6BCC9",
+  "French Blue"     = "#3E4B8E",
+  "Midnight Violet" = "#3D1534"
+)
+```
+
+
+# Ejercicio 1 {-}
+A partir del dataset df, el cual trata de los incendios forestales, realice las siguientes tareas:
+Filtrar los registros para incluir únicamente los incendios ocurridos en el estado de Idaho.
+Seleccionar únicamente las columnas YEAR_, CAUSE y TOTALACRES.
+Renombrar estas columnas con nombres más claros y descriptivos.
+Agrupar la información por CAUSE y YEAR_.
+Resumir el total de acres quemados para cada combinación de causa y año.
+Elaborar una visualización que muestre los resultados de manera clara.
+
+# Incendios Forestales en Idaho
+
+```{r carga-incendios}
+datos <- read_csv("C:/Users/natal/Desktop/bookdown/RDataSets/StudyArea.csv")
+
+df <- datos %>% 
+  filter(STATE == "Idaho", !is.na(CAUSE)) %>% 
+  select(year = YEAR_, causa = CAUSE, total = TOTALACRES) %>% 
+  group_by(causa, year) %>% 
+  summarise(
+    media = mean(total, na.rm = TRUE),
+    mediana = median(total, na.rm = TRUE),
+    RIC = IQR(total, na.rm = TRUE),
+    .groups = "drop"
+  )
+```
+
+## Resumen Estadístico
+
+```{r tabla-incendios}
+df %>%
+  head(10) %>% 
+  gt() %>% 
+  tab_header(
+    title = md("**Resumen Estadístico de Hectáreas Afectadas**"),
+    subtitle = "Estado de Idaho por Causa y Año"
+  ) %>% 
+  cols_label(
+    causa = "Causa",
+    year = "Año",
+    media = "Media (Acres)",
+    mediana = "Mediana (Acres)",
+    RIC = "RIC"
+  ) %>% 
+  fmt_number(
+    columns = c(media, mediana, RIC),
+    decimals = 2
+  ) %>% 
+  tab_style(
+    style = cell_fill(color = "#FFF4EB"), # Seashell
+    locations = cells_body(rows = seq(1, 10, 2))
+  ) %>% 
+  tab_options(
+    table.width = pct(100),
+    column_labels.background.color = "#3E4B8E", # French Blue
+    column_labels.font.weight = "bold",
+    heading.title.font.size = px(18)
+  )
+```
+
+## Evolución Temporal del Impacto
+
+```{r grafica-incendios}
+ggplot(df, aes(x = year, y = media, color = causa, group = causa)) +
+  geom_line(linewidth = 1.2, alpha = 0.9) +
+  geom_point(size = 2.8) +
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 8)) +
+  scale_y_continuous(labels = scales::comma_format()) +
+  scale_color_manual(
+    values = unname(paleta_custom[c("French Blue", "Powder Blue", "Wheat", "Midnight Violet")]),
+    na.value = "#A6BCC9"
+  ) +
+  labs(
+    title = "Promedio de acres afectados por causa en Idaho",
+    subtitle = "Evolución histórica según causa registrada",
+    x = "Año",
+    y = "Promedio de acres",
+    color = "Causa"
+  ) +
+  theme_classic(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14, color = "#3D1534"),
+    plot.subtitle = element_text(size = 10, color = "#3E4B8E"),
+    legend.position = "bottom",
+    legend.background = element_rect(fill = "#FFF4EB", color = NA),
+    axis.line = element_line(color = "#A6BCC9"),
+    panel.grid.major.y = element_line(color = "#F6E0B6")
+  )
+```
+
+
+# Ejercicio 2 {-} 
+Trabajaremos con el conjunto de datos de 120 años de historia olímpica adquirido por Randi Griffin en Randi-Griffin y puesto a disposición en athlete_events.
+Su tarea consiste en identificar los cinco deportes más importantes según el mayor número de medallas otorgadas en el año 2016, y luego realizar el siguiente análisis:
+
+Genere una tabla que indique el número de medallas concedidas en cada uno de los cinco principales deportes en 2016.
+Elabore una tabla que muestre la distribución de la edad de los ganadores de medallas en los cinco principales deportes en 2016.
+Identifique qué equipos nacionales ganaron el mayor número de medallas en los cinco principales deportes en 2016.
+Presente un resumen de la tendencia del peso de los atletas masculinos y femeninos ganadores en los cinco principales deportes en 2016.
+
+# Historia Olímpica: Rio 2016
+
+```{r carga-olimpiadas}
+url <- "https://raw.githubusercontent.com/cdeoroaguado/Datos/refs/heads/main/dataviz/athlete_events.csv"
+datos_2 <- read.csv(url)
+
+df_2016 <- datos_2 %>%
+  filter(Year == 2016, !is.na(Medal))
+```
+
+## Top 5 Deportes con Más Medallas en 2016
+
+```{r top5-deportes}
+top5_deportes <- df_2016 %>%
+  group_by(Sport) %>%
+  summarise(numero_medallas = n(), .groups = "drop") %>%
+  arrange(desc(numero_medallas)) %>%
+  slice_head(n = 5)
+
+top5_deportes %>% 
+  gt() %>% 
+  tab_header(
+    title = md("**Deportes Principales en Río 2016**"),
+    subtitle = "Top 5 según cantidad total de medallas concedidas"
+  ) %>% 
+  cols_label(
+    Sport = "Deporte",
+    numero_medallas = "N° de Medallas"
+  ) %>% 
+  tab_options(
+    table.width = pct(60),
+    column_labels.background.color = "#3D1534", # Midnight Violet
+    column_labels.font.weight = "bold"
+  )
+```
+
+## Distribución de Edad de los Medallistas
+
+```{r distribucion-edad}
+deportes_top <- top5_deportes$Sport
+
+tabla_dist <- df_2016 %>%
+  filter(Sport %in% deportes_top) %>%
+  group_by(Sport) %>%
+  summarise(
+    media = mean(Age, na.rm = TRUE),
+    mediana = median(Age, na.rm = TRUE),
+    desviacion = sd(Age, na.rm = TRUE),
+    minimo = min(Age, na.rm = TRUE),
+    maximo = max(Age, na.rm = TRUE),
+    Q1 = quantile(Age, 0.25, na.rm = TRUE),
+    Q3 = quantile(Age, 0.75, na.rm = TRUE),
+    RIC = IQR(Age, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+tabla_dist %>% 
+  gt() %>% 
+  tab_header(title = md("**Resumen Estadístico de Edad por Deporte**")) %>% 
+  cols_label(
+    Sport = "Deporte", media = "Media", mediana = "Mediana",
+    desviacion = "DE", minimo = "Mín", maximo = "Máx",
+    Q1 = "Q1", Q3 = "Q3", RIC = "RIC"
+  ) %>% 
+  fmt_number(columns = where(is.numeric), decimals = 1) %>% 
+  tab_options(
+    table.width = pct(100), 
+    column_labels.background.color = "#3E4B8E"
+  )
+```
+
+```{r grafica-boxplots-edad}
+ggplot(df_2016 %>% filter(Sport %in% deportes_top), aes(x = reorder(Sport, Age, FUN = median), y = Age, fill = Sport)) +
+  geom_boxplot(alpha = 0.85, color = "#3D1534", outlier.color = "#3E4B8E", outlier.size = 2) +
+  scale_fill_manual(values = unname(paleta_custom)) +
+  labs(
+    title = "Distribución de edad en medallistas de Río 2016",
+    subtitle = "Comparación entre los 5 deportes principales",
+    x = "Deporte",
+    y = "Edad (años)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14, color = "#3D1534"),
+    legend.position = "none",
+    panel.grid.minor = element_blank()
+  )
+```
+
+## Equipos Líderes por Deporte
+
+```{r equipos-lideres}
+tabla_equipos <- df_2016 %>%
+  filter(Sport %in% deportes_top) %>%
+  group_by(Sport, Team) %>%
+  summarise(numero_medallas = n(), .groups = "drop") %>%
+  group_by(Sport) %>%
+  slice_max(numero_medallas, n = 1) %>%
+  ungroup()
+
+tabla_equipos %>% 
+  gt() %>% 
+  tab_header(title = md("**Equipos Nacionales con Más Medallas**")) %>% 
+  cols_label(
+    Sport = "Deporte",
+    Team = "Equipo / País",
+    numero_medallas = "Total Medallas"
+  ) %>% 
+  tab_options(
+    table.width = pct(70), 
+    column_labels.background.color = "#3D1534"
+  )
+```
+
+## Análisis del Peso por Sexo
+
+```{r peso-atletas}
+tabla_peso <- df_2016 %>%
+  filter(Sport %in% deportes_top) %>%
+  group_by(Sport, Sex) %>%
+  summarise(
+    media = mean(Weight, na.rm = TRUE),
+    mediana = median(Weight, na.rm = TRUE),
+    RIC = IQR(Weight, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+tabla_peso %>% 
+  gt() %>% 
+  tab_header(title = md("**Tendencia de Peso por Deporte y Sexo**")) %>% 
+  cols_label(
+    Sport = "Deporte", Sex = "Sexo", media = "Media (kg)",
+    mediana = "Mediana (kg)", RIC = "RIC"
+  ) %>% 
+  fmt_number(columns = c(media, mediana, RIC), decimals = 1) %>% 
+  tab_options(
+    table.width = pct(80), 
+    column_labels.background.color = "#3E4B8E"
+  )
+```
+
+```{r grafica-boxplots-peso}
+ggplot(
+  df_2016 %>% filter(Sport %in% deportes_top, !is.na(Weight)), 
+  aes(x = Sport, y = Weight, fill = Sex)
+) +
+  geom_boxplot(alpha = 0.85, position = position_dodge(width = 0.8), color = "#3D1534") +
+  scale_fill_manual(
+    values = c("F" = "#A6BCC9", "M" = "#3E4B8E"),
+    labels = c("F" = "Femenino", "M" = "Masculino")
+  ) +
+  labs(
+    title = "Distribución de peso por sexo en medallistas (2016)",
+    x = "Deporte",
+    y = "Peso (kg)",
+    fill = "Sexo"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14, color = "#3D1534"),
+    legend.position = "top",
+    panel.grid.minor = element_blank()
+  )
+```
+
+# Ejercicio 3  {-} 
+- Considere el conjunto de datos us_state_population.tsv ubicado en la carpeta de datos de Python de github. 
+- Repita el procedimiento planteado en cada ítem de esta sección para obtener el **nuevo dataframe con las nuevas columnas Year y Population**.
+- Realice **unión y separación utilizando las columnas State y Code**.
+
+```{r}
+library(tidyverse)
+library(readr)
+df <- read_delim("C:/Users/natal/Downloads/us_state_population.tsv", 
+    delim = "\t", escape_double = FALSE, 
+    trim_ws = TRUE)
+df
+```
+
+## Nuevo dataframe con las nuevas columnas Year y Population
+```{r}
+
+library(tidyverse)
+df2 = df %>% 
+  gather("2010","2011","2012","2013","2014","2015","2016","2017","2018",
+         key = "Year",
+         value = 'population')
+knitr::kable(head(df2, 5))
+
+```
+
+## unión
+
+```{r}
+df_unido <- df2 %>%
+  unite("State-Code", State, Code, sep = "-")
+knitr::kable(df_unido)
+```
+
+## Separación
+```{r}
+df_separado <- df_unido %>% 
+  separate('State-Code',
+           into=c('State', 'Code'))-> df_sol_3
+knitr::kable(head(df_separado, 5))
+```
+
+# Ejercicio 4  {-} 
+- Cree el histograma utilizando `ggplot()` con `geom_hist()` y un tamaño de la celda de 500. Los datos están claramente sesgados hacia el extremo inferior del número de acres quemados.
+
+```{r hist_vizest,message=FALSE,warning=FALSE}
+library(readr)
+library(tidyverse)
+datos <- read_csv("C:/Users/natal/Desktop/bookdown/RDataSets/StudyArea.csv")
+df <- datos %>% 
+  filter(TOTALACRES > 1000, YEAR_%in%2010:2016)
+df %>%
+  select(ORGANIZATI, STATE, YEAR_, TOTALACRES, CAUSE) %>%
+  filter(TOTALACRES >= 1000) %>%
+  slice(1:300) %>%
+  ggplot(mapping = aes(x=TOTALACRES)) + 
+  geom_histogram( binwidth=500, fill = "#3E4B8E") +
+  labs(x = "Total Acres", y = "Número de incendios")+
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.title = element_text(face = "bold", color = "#3D1534"),
+    axis.line = element_line(color = "#A6BCC9"),
+    panel.grid.major = element_line(color = "#F6E0B6"),
+    panel.grid.minor = element_blank()
+  )
+
+```
+
